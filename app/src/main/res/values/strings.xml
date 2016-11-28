@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Gift Bug</string>
+    <string name="welcome">Welcome to Gift Bug!</string>
+    <string name="opening">The app that helps you choose gifts for your loved ones.</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">NEXT</string>
+    <string name="person">Please take a moment and think of the person that you are shopping for. Then click the NEXT below.</string>
+
+</resources>
