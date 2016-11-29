@@ -14,9 +14,9 @@ import com.geogehigbie.giftbug.R;
 
 public class ManWomanBoyGirl extends Fragment {
 
-    private String personLower;
-    private String personUpper;
-    private boolean hasYChromosome;
+    private static String personLower;
+    private static String personUpper;
+    private static boolean hasYChromosome;
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -32,15 +32,15 @@ public class ManWomanBoyGirl extends Fragment {
     }
 
     //getters that will be needed for other fragments to access these variables
-    public boolean isHasYChromosome() {
+    public static boolean isHasYChromosome() {
         return hasYChromosome;
     }
 
-    public String getPersonLower() {
+    public static String getPersonLower() {
         return personLower;
     }
 
-    public String getPersonUpper() {
+    public static String getPersonUpper() {
         return personUpper;
     }
 
