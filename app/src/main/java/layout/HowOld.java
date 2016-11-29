@@ -23,6 +23,8 @@ public class HowOld extends Fragment {
     private static boolean hasYChromosome;
     private static boolean isAdult;
 
+    private static int age;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,7 +41,9 @@ public class HowOld extends Fragment {
         return inflater.inflate(R.layout.fragment_how_old, container, false);
     }
 
-
+    public static int getAge() {
+        return age;
+    }
 
     public void changeText(){
 
@@ -71,6 +75,7 @@ public class HowOld extends Fragment {
             }
         });
     }
+
 
 
 

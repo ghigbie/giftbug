@@ -13,7 +13,7 @@
 
 
         <TextView
-            android:id="@+id/person_gender_age"
+            android:id="@+id/coffee_tea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -22,40 +22,35 @@
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/margin"/>
 
-        <Button
-            android:id="@+id/man_button"
+        <LinearLayout
+            android:id="@+id/buttonLinearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/person_gender_age"
-            android:text="@string/man"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/coffee_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coffee"
             android:layout_margin="@dimen/margin"/>
 
         <Button
-            android:id="@+id/woman_button"
+            android:id="@+id/tea_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/man_button"
-            android:text="@string/woman"
+            android:text="@string/tea"
             android:layout_margin="@dimen/margin"/>
+     </LinearLayout>
 
         <Button
-            android:id="@+id/boy_button"
+            android:id="@+id/neither_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/woman_button"
-            android:text="@string/boy"
-            android:layout_margin="@dimen/margin"/>
-
-        <Button
-            android:id="@+id/girl_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/boy_button"
-            android:text="@string/girl"
+            android:layout_below="@id/buttonLinearLayout1"
+            android:layout_centerInParent="true"
+            android:text="@string/neither"
             android:layout_margin="@dimen/margin"/>
 
     </RelativeLayout>
