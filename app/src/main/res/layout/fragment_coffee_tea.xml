@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.ManWomanBoyGirl">
+    tools:context="layout.CoffeeTea">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_centerHorizontal="true"
-            android:text="@string/gender_age"
+            android:text="@string/coffee_tea"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/margin"/>
 
