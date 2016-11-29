@@ -4,10 +4,49 @@
     android:layout_height="match_parent"
     tools:context="layout.HowOld">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/how_old_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/enter_age_text"
+            android:layout_centerHorizontal="true"
+            android:text="@string/how_old"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/enter_age_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edit_age"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/enter_age"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/edit_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin"
+            android:hint="@string/sample_age" />
+
+        <Button
+            android:id="@+id/next2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_age"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/next" />
+
+
+    </RelativeLayout>
 
 </FrameLayout>
