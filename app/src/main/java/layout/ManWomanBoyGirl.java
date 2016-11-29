@@ -17,6 +17,7 @@ public class ManWomanBoyGirl extends Fragment {
     private static String personLower;
     private static String personUpper;
     private static boolean hasYChromosome;
+    private static boolean isAdult;
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -44,6 +45,9 @@ public class ManWomanBoyGirl extends Fragment {
         return personUpper;
     }
 
+    public static boolean isAdult() {
+        return isAdult;
+    }
 
     public void createOnClickEvents(){
 
@@ -58,6 +62,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personLower = "he";
                 personUpper = "He";
                 hasYChromosome = true;
+                isAdult = true;
                 loadNextFragmentAdult();
             }
         });
@@ -69,6 +74,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personLower = "she";
                 personUpper = "She";
                 hasYChromosome = false;
+                isAdult = true;
                 loadNextFragmentAdult();
             }
         });
@@ -80,6 +86,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personLower = "he";
                 personUpper = "He";
                 hasYChromosome = true;
+                isAdult = false;
                 loadNextFragmentChild();
             }
         });
@@ -91,6 +98,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personLower = "she";
                 personUpper = "She";
                 hasYChromosome = false;
+                isAdult = false;
                 loadNextFragmentChild();
             }
         });

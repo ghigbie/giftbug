@@ -18,15 +18,27 @@ public class HowOld extends Fragment {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    private static String personLower;
+    private static String personUpper;
+    private static boolean hasYChromosome;
+    private static boolean isAdult;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        personLower = ManWomanBoyGirl.getPersonLower();
+        personUpper = ManWomanBoyGirl.getPersonUpper();
+        hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
+        isAdult = ManWomanBoyGirl.isAdult();
+
+
         changeText();
+        addClickLister();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_how_old, container, false);
     }
+
 
 
     public void changeText(){
@@ -44,10 +56,22 @@ public class HowOld extends Fragment {
         nextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+
+                if(isAdult)
+                fragmentTransaction.replace(R.id.fragment_container, new CoffeeTea());
+                else{
+                fragmentTransaction.replace(R.id.fragment_container, new SodaJuice()) ;
+                }
+
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
             }
         });
     }
+
 
 
 
