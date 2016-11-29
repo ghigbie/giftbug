@@ -41,6 +41,13 @@ public class CoffeeTea extends Fragment {
         return inflater.inflate(R.layout.fragment_coffee_tea, container, false);
     }
 
+    public static boolean isCoffee() {
+        return isCoffee;
+    }
+
+    public static boolean isNeither() {
+        return isNeither;
+    }
 
     public void setTextView(){
 
@@ -55,6 +62,33 @@ public class CoffeeTea extends Fragment {
         Button coffeeButton = (Button) getActivity().findViewById(R.id.coffee_button);
         Button teaButton = (Button) getActivity().findViewById(R.id.tea_button);
         Button neitherButton = (Button) getActivity().findViewById(R.id.neither_button);
+
+        coffeeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                isCoffee = true;
+            }
+        });
+
+        teaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isCoffee = false;
+            }
+        });
+
+        neitherButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                isNeither = true;
+            }
+        });
+
+        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, new OutdoorsIndoors());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
 
 
 

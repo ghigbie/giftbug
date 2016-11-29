@@ -12,50 +12,45 @@
 
 
         <TextView
-            android:id="@+id/person_gender_age"
+            android:id="@+id/soda_juice_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_above="@+id/buttonLinearLayout1"
             android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
             android:text="@string/soda_juice"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+            android:textAppearance="?android:textAppearanceLarge" />
 
-        <Button
-            android:id="@+id/man_button"
+        <LinearLayout
+            android:id="@+id/buttonLinearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/person_gender_age"
-            android:text="@string/man"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/soda_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/soda" />
+
+            <Button
+                android:id="@+id/juice_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/juice" />
+        </LinearLayout>
 
         <Button
-            android:id="@+id/woman_button"
+            android:id="@+id/neither_button_child"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/man_button"
-            android:text="@string/woman"
-            android:layout_margin="@dimen/margin"/>
-
-        <Button
-            android:id="@+id/boy_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/woman_button"
-            android:text="@string/boy"
-            android:layout_margin="@dimen/margin"/>
-
-        <Button
-            android:id="@+id/girl_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/boy_button"
-            android:text="@string/girl"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_below="@id/buttonLinearLayout1"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/neither" />
 
     </RelativeLayout>
 
