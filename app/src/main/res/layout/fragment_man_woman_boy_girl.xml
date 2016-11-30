@@ -7,27 +7,29 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
 
         <TextView
             android:id="@+id/person_gender_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
+            android:layout_above="@id/linearLayoutUpper"
             android:text="@string/gender_age"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/margin"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutUpper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
 
         <Button
             android:id="@+id/man_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/person_gender_age"
             android:text="@string/man"
             android:layout_margin="@dimen/margin"/>
 
@@ -35,17 +37,23 @@
             android:id="@+id/woman_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/man_button"
             android:text="@string/woman"
             android:layout_margin="@dimen/margin"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLower"
+            android:layout_below="@id/linearLayoutUpper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
 
         <Button
             android:id="@+id/boy_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/woman_button"
             android:text="@string/boy"
             android:layout_margin="@dimen/margin"/>
 
@@ -53,10 +61,10 @@
             android:id="@+id/girl_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/boy_button"
             android:text="@string/girl"
             android:layout_margin="@dimen/margin"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
