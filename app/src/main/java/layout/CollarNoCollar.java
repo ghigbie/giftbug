@@ -22,8 +22,8 @@ public class CollarNoCollar extends Fragment {
     private static boolean hasYChromosome;
     private static boolean isAdult;
 
-    private static boolean isCoffee;
-    private static boolean isNeither;
+    private static boolean wearsCollar;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,5 +32,17 @@ public class CollarNoCollar extends Fragment {
         return inflater.inflate(R.layout.fragment_collar_no_collar, container, false);
     }
 
+
+    public void setTextView(){
+
+        String wearsCollarString = "Does " + personLower + " usually wear a collar or no collar?";
+
+
+    }
+
+    public void setOnClickListeners(){
+
+
+    }
 
 }
