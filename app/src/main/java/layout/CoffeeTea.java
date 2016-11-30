@@ -67,6 +67,7 @@ public class CoffeeTea extends Fragment {
             @Override
             public void onClick(View view) {
                 isCoffee = true;
+                loadFragment();
             }
         });
 
@@ -74,6 +75,7 @@ public class CoffeeTea extends Fragment {
             @Override
             public void onClick(View view) {
                 isCoffee = false;
+                loadFragment();
             }
         });
 
@@ -81,16 +83,21 @@ public class CoffeeTea extends Fragment {
             @Override
             public void onClick(View view) {
                 isNeither = true;
+                loadFragment();
             }
         });
 
+
+
+
+    }
+
+    public void loadFragment(){
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new OutdoorsIndoors());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
-
 
     }
 

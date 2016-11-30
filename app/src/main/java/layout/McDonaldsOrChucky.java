@@ -7,10 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.geogehigbie.giftbug.R;
-
-
 
 
 public class McDonaldsOrChucky extends Fragment {
@@ -44,11 +44,46 @@ public class McDonaldsOrChucky extends Fragment {
 
     public void setTextView(){
 
+        String mcDonaldsString = "Does " + personLower + " prefer McDonalds or Chuck-e-Cheese?";
+
+        TextView mcDonaldsText = (TextView) getActivity().findViewById(R.id.mcdonald_or_chucky);
+        mcDonaldsText.setText(mcDonaldsString);
+
     }
 
 
 
     public void setOnClickListers(){
+
+        Button mcDonaldsButton = (Button) getActivity().findViewById(R.id.mcdonald_button);
+        Button chuckyButton = (Button) getActivity().findViewById(R.id.chucky_button);
+
+        mcDonaldsButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                prefersMcDonalds = true;
+                loadFragment();
+            }
+        });
+
+        chuckyButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                prefersMcDonalds = false;
+                loadFragment();
+            }
+        });
+
+    }
+
+    public void loadFragment(){
+        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, new ResultsPage());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
 
     }
 

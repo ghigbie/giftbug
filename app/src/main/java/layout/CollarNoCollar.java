@@ -60,6 +60,13 @@ public class CollarNoCollar extends Fragment {
             @Override
             public void onClick(View view) {
                 wearsCollar = true;
+
+                if(isAdult){
+                    loadFragmentAdult();
+                }
+                else{
+                    loadFragmentChild();
+                }
             }
         });
 
@@ -67,12 +74,31 @@ public class CollarNoCollar extends Fragment {
             @Override
             public void onClick(View view) {
                 wearsCollar = false;
+
+                if(isAdult){
+                    loadFragmentAdult();
+                }
+                else{
+                    loadFragmentChild();
+                }
             }
         });
 
+    }
+
+    public void loadFragmentAdult(){
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new BurgersOrFine());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+    }
+
+    public void loadFragmentChild(){
+        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, new McDonaldsOrChucky());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
