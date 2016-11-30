@@ -65,6 +65,12 @@ public class CollarNoCollar extends Fragment {
             }
         });
 
+        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, new BurgersOrFine());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
     }
 
 }
