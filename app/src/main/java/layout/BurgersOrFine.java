@@ -15,6 +15,7 @@ import com.geogehigbie.giftbug.R;
 
 public class BurgersOrFine extends Fragment {
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static String personLower;
@@ -29,6 +30,8 @@ public class BurgersOrFine extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        view = inflater.inflate(R.layout.fragment_burgers_or_fine, container, false);
+
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
@@ -39,7 +42,7 @@ public class BurgersOrFine extends Fragment {
         setOnClickListeners();
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_burgers_or_fine, container, false);
+        return view;
     }
 
     public static boolean isPrefersBurgers() {
@@ -58,8 +61,8 @@ public class BurgersOrFine extends Fragment {
 
     public void setOnClickListeners(){
 
-        Button burgerButton = (Button) getActivity().findViewById(R.id.burger_button);
-        Button fineButton = (Button) getActivity().findViewById(R.id.fine_button);
+        Button burgerButton = (Button) view.findViewById(R.id.burger_button);
+        Button fineButton = (Button) view.findViewById(R.id.fine_button);
 
         burgerButton.setOnClickListener(new View.OnClickListener(){
 

@@ -19,16 +19,19 @@ public class ManWomanBoyGirl extends Fragment {
     private static boolean hasYChromosome;
     private static boolean isAdult;
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        view = inflater.inflate(R.layout.fragment_man_woman_boy_girl, container, false);
         // Inflate the layout for this fragment
 
         createOnClickEvents();
-        return inflater.inflate(R.layout.fragment_man_woman_boy_girl, container, false);
+        return view;
 
     }
 
@@ -51,10 +54,10 @@ public class ManWomanBoyGirl extends Fragment {
 
     public void createOnClickEvents(){
 
-        Button manButton = (Button) getActivity().findViewById(R.id.man_button);
-        Button womanButton = (Button) getActivity().findViewById(R.id.woman_button);
-        Button boyButton = (Button) getActivity().findViewById(R.id.boy_button);
-        Button girlButton = (Button) getActivity().findViewById(R.id.girl_button);
+        Button manButton = (Button) view.findViewById(R.id.man_button);
+        Button womanButton = (Button) view.findViewById(R.id.woman_button);
+        Button boyButton = (Button) view.findViewById(R.id.boy_button);
+        Button girlButton = (Button) view.findViewById(R.id.girl_button);
 
         manButton.setOnClickListener(new View.OnClickListener(){
             @Override

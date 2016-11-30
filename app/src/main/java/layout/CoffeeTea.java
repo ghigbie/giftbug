@@ -15,6 +15,8 @@ import com.geogehigbie.giftbug.R;
 
 public class CoffeeTea extends Fragment {
 
+    private View view;
+
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static String personLower;
@@ -30,6 +32,8 @@ public class CoffeeTea extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        view = inflater.inflate(R.layout.fragment_coffee_tea, container, false);
+
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
@@ -38,7 +42,7 @@ public class CoffeeTea extends Fragment {
         setTextView();
         setOnClickListeners();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_coffee_tea, container, false);
+        return view;
     }
 
     public static boolean isCoffee() {
@@ -59,9 +63,9 @@ public class CoffeeTea extends Fragment {
 
     public void setOnClickListeners(){
 
-        Button coffeeButton = (Button) getActivity().findViewById(R.id.coffee_button);
-        Button teaButton = (Button) getActivity().findViewById(R.id.tea_button);
-        Button neitherButton = (Button) getActivity().findViewById(R.id.neither_button);
+        Button coffeeButton = (Button) view.findViewById(R.id.coffee_button);
+        Button teaButton = (Button) view.findViewById(R.id.tea_button);
+        Button neitherButton = (Button) view.findViewById(R.id.neither_button);
 
         coffeeButton.setOnClickListener(new View.OnClickListener(){
             @Override

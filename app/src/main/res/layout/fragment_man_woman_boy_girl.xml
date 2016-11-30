@@ -14,7 +14,7 @@
             android:id="@+id/person_gender_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/linearLayoutUpper"
+            android:layout_above="@+id/linearLayoutUpper"
             android:text="@string/gender_age"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/margin"/>
@@ -44,7 +44,7 @@
 
         <LinearLayout
             android:id="@+id/linearLayoutLower"
-            android:layout_below="@id/linearLayoutUpper"
+            android:layout_below="@+id/linearLayoutUpper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

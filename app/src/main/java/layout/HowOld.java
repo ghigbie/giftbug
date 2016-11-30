@@ -16,6 +16,7 @@ import com.geogehigbie.giftbug.R;
 public class HowOld extends Fragment {
 
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static String personLower;
@@ -28,6 +29,8 @@ public class HowOld extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        view = inflater.inflate(R.layout.fragment_how_old, container, false);
 
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
@@ -55,7 +58,7 @@ public class HowOld extends Fragment {
 
     public void addClickLister(){
 
-        Button nextButton = (Button) getActivity().findViewById(R.id.next2);
+        Button nextButton = (Button) view.findViewById(R.id.next2);
         nextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

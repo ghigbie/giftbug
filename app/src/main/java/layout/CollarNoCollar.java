@@ -15,6 +15,7 @@ import com.geogehigbie.giftbug.R;
 
 public class CollarNoCollar extends Fragment {
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static String personLower;
@@ -29,6 +30,8 @@ public class CollarNoCollar extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        view = inflater.inflate(R.layout.fragment_collar_no_collar, container, false);
+
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
@@ -37,7 +40,7 @@ public class CollarNoCollar extends Fragment {
         setTextView();
         setOnClickListeners();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_collar_no_collar, container, false);
+        return view;
     }
 
     public static boolean isWearsCollar() {
@@ -55,8 +58,8 @@ public class CollarNoCollar extends Fragment {
 
     public void setOnClickListeners(){
 
-        Button collarButton = (Button) getActivity().findViewById(R.id.collar_button);
-        Button noCollarButton = (Button) getActivity().findViewById(R.id.no_collar_button);
+        Button collarButton = (Button) view.findViewById(R.id.collar_button);
+        Button noCollarButton = (Button) view.findViewById(R.id.no_collar_button);
 
         collarButton.setOnClickListener(new View.OnClickListener() {
             @Override
