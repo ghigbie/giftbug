@@ -12,7 +12,6 @@ import android.widget.Button;
 import com.geogehigbie.giftbug.R;
 
 
-
 public class PersonIntro extends Fragment {
 
     private FragmentManager fragmentManager;
@@ -24,24 +23,25 @@ public class PersonIntro extends Fragment {
                              Bundle savedInstanceState) {
 
         loadFirstQuestionPage();
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_person_intro, container, false);
     }
 
     public void loadFirstQuestionPage(){
-        Button next1 = (Button) getActivity().findViewById(R.id.next1);
-        next1.setOnClickListener(new View.OnClickListener(){
+        Button nextOne = (Button) getActivity().findViewById(R.id.next_one);
+        nextOne.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                fragmentInitialize();
+                fragmentInitialize2();
             }
         });
     }
 
-    public void fragmentInitialize(){
+    public void fragmentInitialize2(){
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_container, new ManWomanBoyGirl());
+        fragmentTransaction.replace(R.id.fragment_container, new ManWomanBoyGirl());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }

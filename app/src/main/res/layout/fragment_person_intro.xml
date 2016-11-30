@@ -17,13 +17,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_above="@+id/next1"
+            android:layout_above="@+id/next_one"
             android:text="@string/person"
             android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/margin"/>
 
         <Button
-            android:id="@+id/next1"
+            android:id="@+id/next_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
