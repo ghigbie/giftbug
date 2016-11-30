@@ -29,6 +29,11 @@ public class CollarNoCollar extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        personLower = ManWomanBoyGirl.getPersonLower();
+        personUpper = ManWomanBoyGirl.getPersonUpper();
+        hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
+        isAdult = ManWomanBoyGirl.isAdult();
+
         setTextView();
         setOnClickListeners();
         // Inflate the layout for this fragment

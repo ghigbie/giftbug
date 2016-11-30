@@ -2,12 +2,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context="layout.McDonaldsOrChucky">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/mcdonald_or_chucky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonLinearLayout5"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/mcdonalds_chuck"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+        <LinearLayout
+            android:id="@+id/buttonLinearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mcdonald_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/mcdonalds" />
+
+            <Button
+                android:id="@+id/chucky_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/chucky" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>
