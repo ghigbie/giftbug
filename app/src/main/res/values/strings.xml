@@ -23,6 +23,9 @@
     <string name="outdoors_indoors">Does he or she prefer the outdoors or the indoors?</string>
     <string name="outdoors">Outdoors</string>
     <string name="indoors">Indoors</string>
+    <string name="collar_no_collar">Does he or she prefer usually wear a collar or no collar?</string>
+    <string name="collar">A Collar</string>
+    <string name="no_collar">No Collar</string>
 
     <!--Thinking about doing a bilingual version-->
 

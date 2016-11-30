@@ -4,10 +4,44 @@
     android:layout_height="match_parent"
     tools:context="layout.CollarNoCollar">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/collar_no_collar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLinearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/collar_no_collar"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/buttonLinearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/collar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/collar" />
+
+        <Button
+            android:id="@+id/no_collar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/no_collar" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
 
 </FrameLayout>
