@@ -20,6 +20,9 @@
     <string name="soda_juice">Does he or she drink soda, juice, or neither?</string>
     <string name="soda">Soda</string>
     <string name="juice">Juice</string>
+    <string name="outdoors_indoors">Does he or she prefer the outdoors or the indoors?</string>
+    <string name="outdoors">Outdoors</string>
+    <string name="indoors">Indoors</string>
 
     <!--Thinking about doing a bilingual version-->
 
