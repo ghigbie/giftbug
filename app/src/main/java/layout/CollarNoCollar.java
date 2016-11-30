@@ -40,6 +40,9 @@ public class CollarNoCollar extends Fragment {
         return inflater.inflate(R.layout.fragment_collar_no_collar, container, false);
     }
 
+    public static boolean isWearsCollar() {
+        return wearsCollar;
+    }
 
     public void setTextView(){
 

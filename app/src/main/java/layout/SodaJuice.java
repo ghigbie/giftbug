@@ -68,6 +68,7 @@ public class SodaJuice extends Fragment {
             @Override
             public void onClick(View view) {
                 isSoda = true;
+                loadFragment();
             }
         });
 
@@ -75,6 +76,7 @@ public class SodaJuice extends Fragment {
             @Override
             public void onClick(View view) {
                 isSoda = false;
+                loadFragment();
             }
         });
 
@@ -82,9 +84,13 @@ public class SodaJuice extends Fragment {
             @Override
             public void onClick(View view) {
                 isNeither = true;
+                loadFragment();
             }
         });
 
+    }
+
+    public void loadFragment(){
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new OutdoorsIndoors());

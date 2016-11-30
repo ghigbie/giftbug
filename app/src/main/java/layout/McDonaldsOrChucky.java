@@ -51,7 +51,9 @@ public class McDonaldsOrChucky extends Fragment {
 
     }
 
-
+    public static boolean isPrefersMcDonalds() {
+        return prefersMcDonalds;
+    }
 
     public void setOnClickListers(){
 

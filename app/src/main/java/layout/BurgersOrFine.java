@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.geogehigbie.giftbug.R;
 
@@ -40,13 +42,50 @@ public class BurgersOrFine extends Fragment {
         return inflater.inflate(R.layout.fragment_burgers_or_fine, container, false);
     }
 
-
+    public static boolean isPrefersBurgers() {
+        return prefersBurgers;
+    }
 
     public void setTextViews(){
+
+        String burgerString = "Does " + personLower + " prefer burgers and fries or fine dining?";
+
+        TextView burgerText = (TextView) getActivity().findViewById(R.id.burgers_fine);
+        burgerText.setText(burgerString);
+
 
     }
 
     public void setOnClickListeners(){
+
+        Button burgerButton = (Button) getActivity().findViewById(R.id.burger_button);
+        Button fineButton = (Button) getActivity().findViewById(R.id.fine_button);
+
+        burgerButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                prefersBurgers = true;
+                loadFragment();
+            }
+        });
+
+        fineButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                prefersBurgers = false;
+                loadFragment();
+            }
+        });
+    }
+
+    public void loadFragment(){
+        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, new ResultsPage());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
 
     }
 
