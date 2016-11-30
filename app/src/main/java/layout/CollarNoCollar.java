@@ -51,7 +51,6 @@ public class CollarNoCollar extends Fragment {
         TextView wearsCollarText  = (TextView) getActivity().findViewById(R.id.collar_no_collar);
         wearsCollarText.setText(wearsCollarString);
 
-
     }
 
     public void setOnClickListeners(){

@@ -47,8 +47,7 @@ public class HowOld extends Fragment {
 
     public void changeText(){
 
-        String person = ManWomanBoyGirl.getPersonLower();
-        String question = "How old is " + person;
+        String question = "How old is " + personLower + "?";
 
         TextView textHowOld = (TextView) getActivity().findViewById(R.id.how_old_text);
         textHowOld.setText(question);

@@ -62,6 +62,7 @@ public class OutdoorsIndoors extends Fragment {
             @Override
             public void onClick(View view) {
                 prefersOutdoors = true;
+                loadFragment();
             }
         });
 
@@ -69,14 +70,19 @@ public class OutdoorsIndoors extends Fragment {
             @Override
             public void onClick(View view) {
                 prefersOutdoors = false;
+                loadFragment();
             }
         });
 
 
+    }
+
+    public void loadFragment(){
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new CollarNoCollar());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+
     }
 }
