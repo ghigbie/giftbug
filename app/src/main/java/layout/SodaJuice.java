@@ -45,6 +45,7 @@ public class SodaJuice extends Fragment {
         return view;
     }
 
+
     public static boolean isNeither() {
         return isNeither;
     }
@@ -52,6 +53,7 @@ public class SodaJuice extends Fragment {
     public static boolean isSoda() {
         return isSoda;
     }
+
 
     public void setTextView(){
 
@@ -63,8 +65,8 @@ public class SodaJuice extends Fragment {
 
     public void setOnClickListeners(){
 
-        Button sodaButton = (Button) view.findViewById(R.id.coffee_button);
-        Button juiceButton = (Button) view.findViewById(R.id.tea_button);
+        Button sodaButton = (Button) view.findViewById(R.id.soda_button);
+        Button juiceButton = (Button) view.findViewById(R.id.juice_button);
         Button neitherChildButton = (Button) view.findViewById(R.id.neither_button_child);
 
         sodaButton.setOnClickListener(new View.OnClickListener(){

@@ -32,6 +32,8 @@
     <string name="mcdonalds_chuck">Does he or she usually prefer McDonalds or Chuck-e-Cheese?</string>
     <string name="mcdonalds">McDonalds</string>
     <string name="chucky">Chuck-e-Cheese</string>
+    <string name="results">GiftBug Results</string>
+    <string name="results_text">Here are the items we think he or she will love. (licking on an item will take you directly to the item's amazon page.)</string>
 
     <!--Thinking about doing a bilingual version-->
 

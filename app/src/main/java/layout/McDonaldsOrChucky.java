@@ -48,7 +48,7 @@ public class McDonaldsOrChucky extends Fragment {
 
         String mcDonaldsString = "Does " + personLower + " prefer McDonalds or Chuck-e-Cheese?";
 
-        TextView mcDonaldsText = (TextView) getActivity().findViewById(R.id.mcdonald_or_chucky);
+        TextView mcDonaldsText = (TextView) view.findViewById(R.id.mcdonald_or_chucky);
         mcDonaldsText.setText(mcDonaldsString);
 
     }
