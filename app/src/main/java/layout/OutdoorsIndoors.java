@@ -15,6 +15,7 @@ import com.geogehigbie.giftbug.R;
 
 public class OutdoorsIndoors extends Fragment {
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 
@@ -29,6 +30,8 @@ public class OutdoorsIndoors extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        view = inflater.inflate(R.layout.fragment_outdoors_indoors, container, false);
+
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
@@ -38,7 +41,7 @@ public class OutdoorsIndoors extends Fragment {
         setOnClickListeners();
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_outdoors_indoors, container, false);
+        return view;
     }
 
 
@@ -48,15 +51,15 @@ public class OutdoorsIndoors extends Fragment {
 
     private void setTextView(){
         String outdoorsString = "Does " + personLower + " prefer the outdoors or the indoors?";
-        TextView outdoorText = (TextView) getActivity().findViewById(R.id.outdoors_indoors);
+        TextView outdoorText = (TextView) view.findViewById(R.id.outdoors_indoors);
         outdoorText.setText(outdoorsString);
 
     }
 
     public void setOnClickListeners() {
 
-        Button outdoorsButton = (Button) getActivity().findViewById(R.id.outdoors_button);
-        Button indoorsButton = (Button) getActivity().findViewById(R.id.indoors_button);
+        Button outdoorsButton = (Button) view.findViewById(R.id.outdoors_button);
+        Button indoorsButton = (Button) view.findViewById(R.id.indoors_button);
 
         outdoorsButton.setOnClickListener(new View.OnClickListener() {
             @Override

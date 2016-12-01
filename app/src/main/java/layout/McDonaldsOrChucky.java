@@ -15,6 +15,7 @@ import com.geogehigbie.giftbug.R;
 
 public class McDonaldsOrChucky extends Fragment {
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static String personLower;
@@ -30,6 +31,7 @@ public class McDonaldsOrChucky extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        view = inflater.inflate(R.layout.fragment_mc_donalds_or_chucky, container, false);
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
@@ -39,7 +41,7 @@ public class McDonaldsOrChucky extends Fragment {
         setOnClickListers();
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mc_donalds_or_chucky, container, false);
+        return view;
     }
 
     public void setTextView(){
@@ -57,8 +59,8 @@ public class McDonaldsOrChucky extends Fragment {
 
     public void setOnClickListers(){
 
-        Button mcDonaldsButton = (Button) getActivity().findViewById(R.id.mcdonald_button);
-        Button chuckyButton = (Button) getActivity().findViewById(R.id.chucky_button);
+        Button mcDonaldsButton = (Button) view.findViewById(R.id.mcdonald_button);
+        Button chuckyButton = (Button) view.findViewById(R.id.chucky_button);
 
         mcDonaldsButton.setOnClickListener(new View.OnClickListener(){
 

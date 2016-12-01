@@ -53,7 +53,7 @@ public class BurgersOrFine extends Fragment {
 
         String burgerString = "Does " + personLower + " prefer burgers and fries or fine dining?";
 
-        TextView burgerText = (TextView) getActivity().findViewById(R.id.burgers_fine);
+        TextView burgerText = (TextView) view.findViewById(R.id.burgers_fine);
         burgerText.setText(burgerString);
 
 

@@ -57,7 +57,7 @@ public class CoffeeTea extends Fragment {
 
         String coffeTeaString = "Does " + personLower + " drink coffee, tea or neither?";
 
-        TextView coffeeTeaText = (TextView) getActivity().findViewById(R.id.coffee_tea);
+        TextView coffeeTeaText = (TextView) view.findViewById(R.id.coffee_tea);
         coffeeTeaText.setText(coffeTeaString);
     }
 

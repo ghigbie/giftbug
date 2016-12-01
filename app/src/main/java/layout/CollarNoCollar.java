@@ -51,7 +51,7 @@ public class CollarNoCollar extends Fragment {
 
         String wearsCollarString = "Does " + personLower + " usually wear a collar or no collar?";
 
-        TextView wearsCollarText  = (TextView) getActivity().findViewById(R.id.collar_no_collar);
+        TextView wearsCollarText  = (TextView) view.findViewById(R.id.collar_no_collar);
         wearsCollarText.setText(wearsCollarString);
 
     }

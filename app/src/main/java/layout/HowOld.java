@@ -41,7 +41,7 @@ public class HowOld extends Fragment {
         changeText();
         addClickLister();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_how_old, container, false);
+        return view;
     }
 
     public static int getAge() {

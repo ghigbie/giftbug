@@ -14,6 +14,7 @@ import com.geogehigbie.giftbug.R;
 
 public class SodaJuice extends Fragment {
 
+    private View view;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static String personLower;
@@ -29,6 +30,8 @@ public class SodaJuice extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        view = inflater.inflate(R.layout.fragment_soda_juice, container, false);
+
         personLower = ManWomanBoyGirl.getPersonLower();
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
@@ -39,7 +42,7 @@ public class SodaJuice extends Fragment {
 
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_soda_juice, container, false);
+        return view;
     }
 
     public static boolean isNeither() {
@@ -54,15 +57,15 @@ public class SodaJuice extends Fragment {
 
         String sodaJuiceString = "Does " + personLower + " drink soda, juice, or neither?";
 
-        TextView coffeeTeaText = (TextView) getActivity().findViewById(R.id.soda_juice_text);
+        TextView coffeeTeaText = (TextView) view.findViewById(R.id.soda_juice_text);
         coffeeTeaText.setText(sodaJuiceString);
     }
 
     public void setOnClickListeners(){
 
-        Button sodaButton = (Button) getActivity().findViewById(R.id.coffee_button);
-        Button juiceButton = (Button) getActivity().findViewById(R.id.tea_button);
-        Button neitherChildButton = (Button) getActivity().findViewById(R.id.neither_button_child);
+        Button sodaButton = (Button) view.findViewById(R.id.coffee_button);
+        Button juiceButton = (Button) view.findViewById(R.id.tea_button);
+        Button neitherChildButton = (Button) view.findViewById(R.id.neither_button_child);
 
         sodaButton.setOnClickListener(new View.OnClickListener(){
             @Override
