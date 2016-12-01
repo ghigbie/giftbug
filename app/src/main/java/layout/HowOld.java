@@ -52,7 +52,7 @@ public class HowOld extends Fragment {
 
         String question = "How old is " + personLower + "?";
 
-        TextView textHowOld = (TextView) getActivity().findViewById(R.id.how_old_text);
+        TextView textHowOld = (TextView) view.findViewById(R.id.how_old_text);
         textHowOld.setText(question);
     }
 

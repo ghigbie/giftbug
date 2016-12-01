@@ -66,7 +66,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personUpper = "He";
                 hasYChromosome = true;
                 isAdult = true;
-                loadNextFragmentAdult();
+                loadNextFragment();
             }
         });
 
@@ -78,7 +78,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personUpper = "She";
                 hasYChromosome = false;
                 isAdult = true;
-                loadNextFragmentAdult();
+                loadNextFragment();
             }
         });
 
@@ -90,7 +90,7 @@ public class ManWomanBoyGirl extends Fragment {
                 personUpper = "He";
                 hasYChromosome = true;
                 isAdult = false;
-                loadNextFragmentChild();
+                loadNextFragment();
             }
         });
 
@@ -102,29 +102,23 @@ public class ManWomanBoyGirl extends Fragment {
                 personUpper = "She";
                 hasYChromosome = false;
                 isAdult = false;
-                loadNextFragmentChild();
+                loadNextFragment();
             }
         });
 
 
     }
 
-    public void loadNextFragmentAdult(){
+    public void loadNextFragment(){
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, new CoffeeTea());
+        fragmentTransaction.replace(R.id.fragment_container, new HowOld());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
 
-    public void loadNextFragmentChild(){
-        fragmentManager = getActivity().getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, new SodaJuice());
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
+
 
 
 
