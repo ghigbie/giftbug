@@ -4,11 +4,11 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/newBackgroundColor"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/newBackgroundColor"
     tools:context="com.geogehigbie.giftbug.MainActivity">
 
     <FrameLayout
@@ -16,63 +16,91 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/welcomeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/margin"
                 android:text="@string/welcome"
-                android:textStyle="bold"
-                android:layout_gravity="center"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:layout_margin="@dimen/margin"/>
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chooseLangaugeEng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcomeText"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/choose_language"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold" />
+
 
             <TextView
                 android:id="@+id/welcomeTextEsp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome"
-                android:textStyle="bold"
-                android:layout_gravity="center"
+                android:layout_below="@id/chooseLangaugeEng"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/bienvenido"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:layout_margin="@dimen/margin"/>
+                android:textStyle="bold" />
+
 
             <TextView
-                android:id="@+id/openingText"
+                android:id="@+id/chooseLangaugeEsp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/opening"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_margin="@dimen/margin"/>
-
-        <TextView
-            android:id="@+id/openingEsp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/opening"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+                android:layout_below="@id/welcomeTextEsp"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/choose_lang_esp"
+                android:textAppearance="?android:textAppearanceLarge" />
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/get_started"
+                android:id="@+id/linearLayoutMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/get_started"
-                android:layout_margin="@dimen/margin"/>
+                android:layout_below="@id/chooseLangaugeEsp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/english" />
+
+                <Button
+                    android:id="@+id/español"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin"
+                    android:text="@string/español" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutMain"
+                android:layout_centerInParent="true"
+                android:src="@drawable/gift_bug_logo_clear"/>
+
+        </RelativeLayout>
+
 
     </FrameLayout>
 
