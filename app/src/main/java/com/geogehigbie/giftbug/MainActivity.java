@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import layout.PersonIntro;
 
@@ -43,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
+    }
+
+    public void beginAnimation(){
+        ImageView bug = (ImageView) findViewById(R.id.bug_spinner);
+
+        bug.rotationX(80).setDuration(400).start();
     }
 
 

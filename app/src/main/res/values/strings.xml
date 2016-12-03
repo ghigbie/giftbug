@@ -5,8 +5,8 @@
     <string name="opening">The app that helps you choose gifts for your loved ones.</string>
     <string name="languageEng">Please choose a language.</string>
     <string name="languageEsp">Por favor, eliga un idioma.</string>
-    <string name="english">English</string>
-    <string name="español">español</string>
+    <string name="english_langauge">English</string>
+    <string name="español_langauge">español</string>
     <string name="get_started">Get Started</string>
     <string name="next">NEXT</string>
     <string name="person">Please take a moment and think of the person that you are shopping for. Then click the NEXT below.</string>
