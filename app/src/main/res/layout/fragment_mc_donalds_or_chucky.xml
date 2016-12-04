@@ -41,6 +41,14 @@
                 android:text="@string/chucky" />
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/bug_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonLinearLayout5"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gift_bug_logo_clear"/>
+
 
 
     </RelativeLayout>
