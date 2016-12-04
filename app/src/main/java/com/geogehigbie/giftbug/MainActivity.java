@@ -1,6 +1,7 @@
 package com.geogehigbie.giftbug;
 
 import android.animation.Animator;
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -22,23 +23,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // loadIntroPage();
-
+        centerActionBar();
         setOnClickListeners();
 
-        //fragmentInitialize();
+
     }
 
- //  public void loadIntroPage(){
-//        Button getStarted = (Button) findViewById(R.id.get_started);
-//
-//        getStarted.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                fragmentInitialize();
-//            }
-//        });
- //   }
 
     public void fragmentInitialize(){
         fragmentManager = getSupportFragmentManager();
@@ -52,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     public void beginAnimation(){
         ImageView bug = (ImageView) findViewById(R.id.bug_spinner);
         bug.animate().rotation(360).setDuration(750).start();
-        bug.animate().setListener(new Animator.AnimatorListener() {
+        bug.animate().setStartDelay(100).setListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
 
@@ -95,9 +85,17 @@ public class MainActivity extends AppCompatActivity {
                  beginAnimation();
              }
          });
+    }
 
 
-}
+    public void centerActionBar(){
+
+        ActionBar actionBar = getActionBar();
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); //this is a soft error
+        getSupportActionBar().setCustomView(R.layout.actionbar);
+
+    }
 
 
 

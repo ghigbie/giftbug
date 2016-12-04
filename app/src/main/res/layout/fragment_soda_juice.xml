@@ -15,7 +15,7 @@
             android:id="@+id/bug_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/soda_juice_text"
+            android:layout_above="@+id/soda_juice_text"
             android:layout_centerInParent="true"
             android:layout_margin="@dimen/margin"
             android:src="@drawable/gift_bug_logo_clear"/>

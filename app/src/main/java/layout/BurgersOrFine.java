@@ -1,5 +1,6 @@
 package layout;
 
+import android.animation.Animator;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.geogehigbie.giftbug.R;
@@ -69,7 +71,7 @@ public class BurgersOrFine extends Fragment {
             @Override
             public void onClick(View view) {
                 prefersBurgers = true;
-                loadFragment();
+                beginAnimation();
             }
         });
 
@@ -78,7 +80,7 @@ public class BurgersOrFine extends Fragment {
             @Override
             public void onClick(View view) {
                 prefersBurgers = false;
-                loadFragment();
+                beginAnimation();
             }
         });
     }
@@ -89,6 +91,34 @@ public class BurgersOrFine extends Fragment {
         fragmentTransaction.replace(R.id.fragment_container, new ResultsPage());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+
+    }
+
+
+    public void beginAnimation(){
+        ImageView bug = (ImageView) view.findViewById(R.id.bug_spinner);
+        bug.animate().rotation(360).setDuration(750).start();
+        bug.animate().setStartDelay(100).setListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+               loadFragment();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
 
     }
 
