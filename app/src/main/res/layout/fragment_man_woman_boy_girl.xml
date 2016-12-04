@@ -9,14 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/bug_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/person_gender_age"
-            android:layout_centerInParent="true"
-            android:src="@drawable/gift_bug_logo_clear"/>
-
 
         <TextView
             android:id="@+id/person_gender_age"
@@ -73,6 +65,16 @@
             android:layout_margin="@dimen/margin"/>
 
         </LinearLayout>
+
+        <ImageView
+        android:id="@+id/bug_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutLower"
+        android:layout_centerInParent="true"
+        android:src="@drawable/gift_bug_logo_clear"/>
+
+
 
     </RelativeLayout>
 
