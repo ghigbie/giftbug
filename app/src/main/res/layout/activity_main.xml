@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/chooseLangaugeEng"
                 android:layout_centerInParent="true"
-                android:layout_Top="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:text="@string/bienvenido"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textStyle="bold" />
