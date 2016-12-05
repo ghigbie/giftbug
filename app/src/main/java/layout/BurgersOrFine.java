@@ -58,9 +58,16 @@ public class BurgersOrFine extends Fragment {
     public void setTextViews(){
 
         String burgerString = "Does " + personLower + " prefer burgers and fries or fine dining?";
+        String burgerStringEsp = "¿Prefiere comer hamberguesa y papas fritas or comida elegante?";
 
         TextView burgerText = (TextView) view.findViewById(R.id.burgers_fine);
-        burgerText.setText(burgerString);
+
+        if(english) {
+            burgerText.setText(burgerString);
+        }
+        else {
+            burgerText.setText(burgerStringEsp);
+        }
 
 
     }

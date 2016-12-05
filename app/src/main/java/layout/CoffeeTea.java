@@ -60,9 +60,17 @@ public class CoffeeTea extends Fragment {
     public void setTextView(){
 
         String coffeTeaString = "Does " + personLower + " drink coffee, tea or neither?";
+        String coffeTeaStringEsp = "¿Prefiere tomar café, té o ninguno?";
+
 
         TextView coffeeTeaText = (TextView) view.findViewById(R.id.coffee_tea);
-        coffeeTeaText.setText(coffeTeaString);
+
+        if(english){
+            coffeeTeaText.setText(coffeTeaString);
+        }
+        else{
+            coffeeTeaText.setText(coffeTeaStringEsp);
+        }
     }
 
     public void setOnClickListeners(){
@@ -70,6 +78,12 @@ public class CoffeeTea extends Fragment {
         Button coffeeButton = (Button) view.findViewById(R.id.coffee_button);
         Button teaButton = (Button) view.findViewById(R.id.tea_button);
         Button neitherButton = (Button) view.findViewById(R.id.neither_button);
+
+        if(english == false) {
+            coffeeButton.setText("Café");
+            teaButton.setText("Té");
+            neitherButton.setText("ninguno");
+        }
 
         coffeeButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -94,9 +108,6 @@ public class CoffeeTea extends Fragment {
                 loadFragment();
             }
         });
-
-
-
 
     }
 

@@ -53,9 +53,18 @@ public class CollarNoCollar extends Fragment {
     public void setTextView(){
 
         String wearsCollarString = "Does " + personLower + " usually wear a collar or no collar?";
+        String wearsCollarStringEsp = "¿Prefiere llevar polos o camisetas?";
+
 
         TextView wearsCollarText  = (TextView) view.findViewById(R.id.collar_no_collar);
-        wearsCollarText.setText(wearsCollarString);
+
+
+        if(english){
+            wearsCollarText.setText(wearsCollarString);
+        }
+        else{
+            wearsCollarText.setText(wearsCollarStringEsp);
+        }
     }
 
 
@@ -63,6 +72,11 @@ public class CollarNoCollar extends Fragment {
 
         Button collarButton = (Button) view.findViewById(R.id.collar_button);
         Button noCollarButton = (Button) view.findViewById(R.id.no_collar_button);
+
+        if(english == false){
+            collarButton.setText("Polos");
+            noCollarButton.setText("Camisetas");
+        }
 
         collarButton.setOnClickListener(new View.OnClickListener() {
             @Override
