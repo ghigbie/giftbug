@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    private static boolean english = true;
+    private static boolean english;
     private static SoundPool soundPool;
     private static int wooshSound;
 
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setOnClickListeners();
     }
 
-    public static void playSound(){
+    public void playSound(){
+        wooshSound = soundPool.load(this, R.raw.woosh, 1);
         soundPool.play(wooshSound, 1, 1, 1, 0, 1);
     }
 
