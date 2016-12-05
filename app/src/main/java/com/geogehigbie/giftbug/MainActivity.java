@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static void playSound(){
         soundPool.play(wooshSound, 1, 1, 1, 0, 1);
-
     }
 
 
