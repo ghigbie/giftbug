@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
 public class SodaJuice extends Fragment {
@@ -21,6 +22,7 @@ public class SodaJuice extends Fragment {
     private static String personUpper;
     private static boolean hasYChromosome;
     private static boolean isAdult;
+    private static boolean english;
 
     private static boolean isSoda;
     private static boolean isNeither;
@@ -36,6 +38,7 @@ public class SodaJuice extends Fragment {
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
         isAdult = ManWomanBoyGirl.isAdult();
+        english = MainActivity.isEnglish();
 
         setTextView();
         setOnClickListeners();

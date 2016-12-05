@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
 
@@ -21,6 +22,7 @@ public class ResultsPage extends Fragment {
     private static String personUpper;
     private static boolean hasYChromosome;
     private static boolean isAdult;
+    private static boolean english;
 
     private static boolean prefersBurgers;
 
@@ -28,6 +30,7 @@ public class ResultsPage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        english = MainActivity.isEnglish();
         view = inflater.inflate(R.layout.fragment_results_page, container, false);
 
         // Inflate the layout for this fragment
