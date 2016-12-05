@@ -58,7 +58,7 @@ public class BurgersOrFine extends Fragment {
     public void setTextViews(){
 
         String burgerString = "Does " + personLower + " prefer burgers and fries or fine dining?";
-        String burgerStringEsp = "¿Prefiere comer hamberguesa y papas fritas or comida elegante?";
+        String burgerStringEsp = "¿Prefiere comer hamberguesas y papas fritas or comida elegante?";
 
         TextView burgerText = (TextView) view.findViewById(R.id.burgers_fine);
 
@@ -76,6 +76,11 @@ public class BurgersOrFine extends Fragment {
 
         Button burgerButton = (Button) view.findViewById(R.id.burger_button);
         Button fineButton = (Button) view.findViewById(R.id.fine_button);
+
+        if(english == false){
+            burgerButton.setText("Hamburguesas");
+            fineButton.setText("Comida Elegante");
+        }
 
         burgerButton.setOnClickListener(new View.OnClickListener(){
 

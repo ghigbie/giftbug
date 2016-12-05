@@ -39,10 +39,19 @@ public class ResultsPage extends Fragment {
 
     public void setTextView(){
 
-        String resultsString = "Here are the results that we think " + personLower + " will love. (Clicking on an item will take you directly to the item\'s amazon page.)";
+        String resultsString = "Here are the results that we think " + personLower + " will love. (Clicking on an item will take you " +
+                "directly to the item\'s Amazon page.)";
+
+        String resultsStringEsp = "Abajo son los regalos que se recomiendan. (Si usted hace clique abajo, le llevará a la página de Amazon.)";
 
         TextView resultsText = (TextView) view.findViewById(R.id.results_text);
-        resultsText.setText(resultsString);
+
+        if(english) {
+            resultsText.setText(resultsString);
+        }
+        else {
+            resultsText.setText(resultsStringEsp);
+        }
 
     }
 
