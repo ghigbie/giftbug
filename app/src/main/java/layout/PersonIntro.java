@@ -1,5 +1,6 @@
 package layout;
 
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,6 +19,8 @@ public class PersonIntro extends Fragment {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    private SoundPool soundPool;
+
 
     private static boolean english;
 

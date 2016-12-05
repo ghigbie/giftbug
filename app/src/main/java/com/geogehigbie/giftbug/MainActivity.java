@@ -2,6 +2,7 @@ package com.geogehigbie.giftbug;
 
 import android.animation.Animator;
 import android.app.ActionBar;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.sql.SQLOutput;
+
 import layout.PersonIntro;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private static boolean english;
+    private static SoundPool soundPool;
+    private static int wooshSound;
 
 
     @Override
@@ -26,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         centerActionBar();
         setOnClickListeners();
+    }
+
+    public static void playSound(){
+        soundPool.play(wooshSound, 1, 1, 1, 0, 1);
+
     }
 
 
@@ -44,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         bug.animate().setStartDelay(100).setListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
-
+                playSound();
             }
 
             @Override
