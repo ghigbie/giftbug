@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
 
@@ -24,8 +25,10 @@ public class BurgersOrFine extends Fragment {
     private static String personUpper;
     private static boolean hasYChromosome;
     private static boolean isAdult;
+    private static boolean english;
 
     private static boolean prefersBurgers;
+
 
 
     @Override
@@ -38,6 +41,7 @@ public class BurgersOrFine extends Fragment {
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
         isAdult = ManWomanBoyGirl.isAdult();
+        english = MainActivity.isEnglish();
 
 
         setTextViews();

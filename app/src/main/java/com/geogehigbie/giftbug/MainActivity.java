@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    private static boolean english;
 
 
     @Override
@@ -25,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         centerActionBar();
         setOnClickListeners();
-
-
     }
 
 
