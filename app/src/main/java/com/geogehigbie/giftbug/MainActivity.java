@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    private static boolean english;
+    private static boolean english = true;
     private static SoundPool soundPool;
     private static int wooshSound;
 
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setOnClickListeners(){
 
-         Button english = (Button) findViewById(R.id.english);
+         final Button english = (Button) findViewById(R.id.english);
          Button español = (Button) findViewById(R.id.español);
 
          english.setOnClickListener(new View.OnClickListener(){
@@ -95,8 +95,13 @@ public class MainActivity extends AppCompatActivity {
              @Override
              public void onClick(View view) {
                  beginAnimation();
+                 setLanguage();
              }
          });
+    }
+
+    public void setLanguage(){
+        english = false;
     }
 
 
