@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
 
@@ -18,6 +19,7 @@ public class ManWomanBoyGirl extends Fragment {
     private static String personUpper;
     private static boolean hasYChromosome;
     private static boolean isAdult;
+    private static boolean english;
 
     private View view;
     private FragmentManager fragmentManager;
@@ -26,6 +28,8 @@ public class ManWomanBoyGirl extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        english = MainActivity.isEnglish();
 
         view = inflater.inflate(R.layout.fragment_man_woman_boy_girl, container, false);
         // Inflate the layout for this fragment

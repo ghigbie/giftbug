@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
 
@@ -22,6 +23,7 @@ public class CollarNoCollar extends Fragment {
     private static String personUpper;
     private static boolean hasYChromosome;
     private static boolean isAdult;
+    private static boolean english;
 
     private static boolean wearsCollar;
 
@@ -36,6 +38,7 @@ public class CollarNoCollar extends Fragment {
         personUpper = ManWomanBoyGirl.getPersonUpper();
         hasYChromosome = ManWomanBoyGirl.isHasYChromosome();
         isAdult = ManWomanBoyGirl.isAdult();
+        english = MainActivity.isEnglish();
 
         setTextView();
         setOnClickListeners();
@@ -53,8 +56,8 @@ public class CollarNoCollar extends Fragment {
 
         TextView wearsCollarText  = (TextView) view.findViewById(R.id.collar_no_collar);
         wearsCollarText.setText(wearsCollarString);
-
     }
+
 
     public void setOnClickListeners(){
 

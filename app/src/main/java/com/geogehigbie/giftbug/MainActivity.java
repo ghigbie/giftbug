@@ -65,8 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public static boolean isEnglish() {
+        return english;
+    }
 
-     public void setOnClickListeners(){
+    public void setOnClickListeners(){
 
          Button english = (Button) findViewById(R.id.english);
          Button español = (Button) findViewById(R.id.español);
