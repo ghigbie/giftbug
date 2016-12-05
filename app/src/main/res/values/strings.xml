@@ -17,6 +17,7 @@
     <string name="girl">Girl</string>
     <string name="how_old">How old is this person?</string>
     <string name="enter_age">(Please enter an age below.)</string>
+    <string name="warning_text">Please enter a valid age.</string>
     <string name="sample_age">26</string>
     <string name="coffee_tea">Does he or she drink coffee, tea, or neither?</string>
     <string name="coffee">Coffee</string>
