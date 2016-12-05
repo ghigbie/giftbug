@@ -26,8 +26,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="@dimen/margin"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin"
                 android:text="@string/welcome"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textStyle="bold" />
@@ -38,11 +38,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/welcomeText"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="0dp"
                 android:layout_marginBottom="15dp"
+                android:layout_marginTop="0dp"
                 android:text="@string/choose_language"
-                android:textAppearance="?android:textAppearanceLarge"
-                />
+                android:textAppearance="?android:textAppearanceLarge" />
 
 
             <TextView
@@ -63,8 +62,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/welcomeTextEsp"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
                 android:text="@string/choose_lang_esp"
                 android:textAppearance="?android:textAppearanceLarge" />
 
@@ -101,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linearLayoutMain"
                 android:layout_centerInParent="true"
-                android:src="@drawable/gift_bug_logo_clear"/>
+                android:src="@drawable/gift_bug_logo_clear" />
 
         </RelativeLayout>
 

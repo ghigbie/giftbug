@@ -72,7 +72,7 @@ public class OutdoorsIndoors extends Fragment {
         Button outdoorsButton = (Button) view.findViewById(R.id.outdoors_button);
         Button indoorsButton = (Button) view.findViewById(R.id.indoors_button);
 
-        if(english == false){
+        if(!english){
             outdoorsButton.setText("Fuera de la Casa");
             indoorsButton.setText("Dentro de la Casa");
         }

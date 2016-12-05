@@ -36,7 +36,7 @@ public class ManWomanBoyGirl extends Fragment {
         // Inflate the layout for this fragment
 
         TextView manWomanText = (TextView) view.findViewById(R.id.person_gender_age);
-        if(english == false){
+        if(!english){
             manWomanText.setText("¿Es hombre, mujer, chico o chica?");
         }
 

@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_margin="@dimen/margin"
-            android:inputType="number"
-            android:hint="@string/sample_age" />
+            android:hint="@string/sample_age"
+            android:inputType="number" />
 
         <Button
             android:id="@+id/next2"
@@ -53,11 +53,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/next2"
-            android:text="@string/warning_text"
-            android:textStyle="bold"
             android:layout_centerInParent="true"
+            android:text="@string/warning_text"
+            android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@color/colorWarning"
-            android:textAppearance="?android:textAppearanceLarge"/>
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
 
     </RelativeLayout>

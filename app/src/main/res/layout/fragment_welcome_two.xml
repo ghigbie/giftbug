@@ -11,25 +11,25 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:layout_margin="@dimen/margin"/>
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/welcome"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold" />
 
 
-    <TextView
-        android:id="@+id/openingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/opening"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:layout_margin="@dimen/margin"/>
+        <TextView
+            android:id="@+id/openingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/opening"
+            android:textAppearance="?android:textAppearanceLarge" />
 
 
         <Button
@@ -37,13 +37,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/get_started"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_margin="@dimen/margin"
+            android:text="@string/get_started" />
 
 
     </LinearLayout>
-
-
 
 
 </FrameLayout>

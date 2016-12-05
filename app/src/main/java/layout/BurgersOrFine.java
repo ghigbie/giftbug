@@ -30,7 +30,6 @@ public class BurgersOrFine extends Fragment {
     private static boolean prefersBurgers;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -55,34 +54,33 @@ public class BurgersOrFine extends Fragment {
         return prefersBurgers;
     }
 
-    public void setTextViews(){
+    public void setTextViews() {
 
         String burgerString = "Does " + personLower + " prefer burgers and fries or fine dining?";
         String burgerStringEsp = "¿Prefiere comer hamberguesas y papas fritas or comida elegante?";
 
         TextView burgerText = (TextView) view.findViewById(R.id.burgers_fine);
 
-        if(english) {
+        if (english) {
             burgerText.setText(burgerString);
-        }
-        else {
+        } else {
             burgerText.setText(burgerStringEsp);
         }
 
 
     }
 
-    public void setOnClickListeners(){
+    public void setOnClickListeners() {
 
         Button burgerButton = (Button) view.findViewById(R.id.burger_button);
         Button fineButton = (Button) view.findViewById(R.id.fine_button);
 
-        if(english == false){
+        if (!english) {
             burgerButton.setText("Hamburguesas");
             fineButton.setText("Comida Elegante");
         }
 
-        burgerButton.setOnClickListener(new View.OnClickListener(){
+        burgerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -91,7 +89,7 @@ public class BurgersOrFine extends Fragment {
             }
         });
 
-        fineButton.setOnClickListener(new View.OnClickListener(){
+        fineButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -101,7 +99,7 @@ public class BurgersOrFine extends Fragment {
         });
     }
 
-    public void loadFragment(){
+    public void loadFragment() {
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new ResultsPage());
@@ -111,7 +109,7 @@ public class BurgersOrFine extends Fragment {
     }
 
 
-    public void beginAnimation(){
+    public void beginAnimation() {
         ImageView bug = (ImageView) view.findViewById(R.id.bug_spinner);
         bug.animate().rotation(360).setDuration(750).start();
         bug.animate().setStartDelay(100).setListener(new Animator.AnimatorListener() {
@@ -122,7 +120,7 @@ public class BurgersOrFine extends Fragment {
 
             @Override
             public void onAnimationEnd(Animator animator) {
-               loadFragment();
+                loadFragment();
             }
 
             @Override
@@ -137,7 +135,6 @@ public class BurgersOrFine extends Fragment {
         });
 
     }
-
 
 
 }

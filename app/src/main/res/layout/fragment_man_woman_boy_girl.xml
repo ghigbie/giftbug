@@ -15,65 +15,64 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/linearLayoutUpper"
+            android:layout_margin="@dimen/margin"
             android:text="@string/gender_age"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+            android:textAppearance="?android:textAppearanceLarge" />
 
         <LinearLayout
             android:id="@+id/linearLayoutUpper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/man_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/man"
-            android:layout_margin="@dimen/margin"/>
+            <Button
+                android:id="@+id/man_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/man" />
 
-        <Button
-            android:id="@+id/woman_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/woman"
-            android:layout_margin="@dimen/margin"/>
+            <Button
+                android:id="@+id/woman_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/woman" />
 
-    </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayoutLower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/linearLayoutUpper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/boy_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/boy"
-            android:layout_margin="@dimen/margin"/>
+            <Button
+                android:id="@+id/boy_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/boy" />
 
-        <Button
-            android:id="@+id/girl_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/girl"
-            android:layout_margin="@dimen/margin"/>
+            <Button
+                android:id="@+id/girl_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/girl" />
 
         </LinearLayout>
 
         <ImageView
-        android:id="@+id/bug_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayoutLower"
-        android:layout_centerInParent="true"
-        android:src="@drawable/gift_bug_logo_clear"/>
-
+            android:id="@+id/bug_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutLower"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gift_bug_logo_clear" />
 
 
     </RelativeLayout>

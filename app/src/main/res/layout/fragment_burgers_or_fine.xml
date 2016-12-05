@@ -47,8 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/buttonLinearLayout4"
             android:layout_centerInParent="true"
-            android:src="@drawable/gift_bug_logo_clear"/>
-
+            android:src="@drawable/gift_bug_logo_clear" />
 
 
     </RelativeLayout>

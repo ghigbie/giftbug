@@ -15,29 +15,29 @@
             android:id="@+id/results_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/results"
-            android:textStyle="bold"
             android:layout_gravity="center"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/results"
             android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/results_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="@dimen/margin"
             android:text="@string/results_text"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+            android:textAppearance="?android:textAppearanceLarge" />
 
         <TextView
             android:id="@+id/todo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="@dimen/margin"
             android:text="Need to Add RecyclerView"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+            android:textAppearance="?android:textAppearanceLarge" />
 
     </LinearLayout>
 

@@ -51,7 +51,7 @@ public class HowOld extends Fragment {
         return age;
     }
 
-    public void changeText(){
+    public void changeText() {
 
         String question = "How old is " + personLower + "?";
         String questionEsp = "¿Cuántos años tiene?";
@@ -59,10 +59,9 @@ public class HowOld extends Fragment {
         TextView textHowOld = (TextView) view.findViewById(R.id.how_old_text);
         TextView textEnter = (TextView) view.findViewById(R.id.enter_age_text);
 
-        if(english){
+        if (english) {
             textHowOld.setText(question);
-        }
-        else{
+        } else {
             textHowOld.setText(questionEsp);
             textEnter.setText("Por favor, entre la edad abajo");
         }
@@ -70,26 +69,25 @@ public class HowOld extends Fragment {
     }
 
 
-
-    public void addClickLister(){
+    public void addClickLister() {
 
         Button nextButton = (Button) view.findViewById(R.id.next2);
 
-        if(english == false){
+        if (!english) {
             nextButton.setText("Siguiente");
         }
 
 
-        nextButton.setOnClickListener(new View.OnClickListener(){
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
 
-                if(isAdult)
-                fragmentTransaction.replace(R.id.fragment_container, new CoffeeTea());
-                else{
-                fragmentTransaction.replace(R.id.fragment_container, new SodaJuice()) ;
+                if (isAdult)
+                    fragmentTransaction.replace(R.id.fragment_container, new CoffeeTea());
+                else {
+                    fragmentTransaction.replace(R.id.fragment_container, new SodaJuice());
                 }
 
                 fragmentTransaction.addToBackStack(null);
@@ -98,9 +96,6 @@ public class HowOld extends Fragment {
             }
         });
     }
-
-
-
 
 
 }

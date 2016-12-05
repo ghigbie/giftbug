@@ -16,19 +16,19 @@
             android:id="@+id/personThink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_above="@+id/next_one"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin"
             android:text="@string/person"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="@dimen/margin"/>
+            android:textAppearance="?android:textAppearanceLarge" />
 
         <Button
             android:id="@+id/next_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/next"
-            android:layout_margin="@dimen/margin"/>
+            android:layout_margin="@dimen/margin"
+            android:text="@string/next" />
 
         <ImageView
             android:id="@+id/bug_stationary"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/next_one"
             android:layout_centerInParent="true"
-            android:src="@drawable/gift_bug_logo_clear"/>
+            android:src="@drawable/gift_bug_logo_clear" />
 
     </RelativeLayout>
 </FrameLayout>

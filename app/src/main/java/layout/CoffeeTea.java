@@ -57,7 +57,7 @@ public class CoffeeTea extends Fragment {
         return isNeither;
     }
 
-    public void setTextView(){
+    public void setTextView() {
 
         String coffeTeaString = "Does " + personLower + " drink coffee, tea or neither?";
         String coffeTeaStringEsp = "¿Prefiere tomar café, té o ninguno?";
@@ -65,27 +65,26 @@ public class CoffeeTea extends Fragment {
 
         TextView coffeeTeaText = (TextView) view.findViewById(R.id.coffee_tea);
 
-        if(english){
+        if (english) {
             coffeeTeaText.setText(coffeTeaString);
-        }
-        else{
+        } else {
             coffeeTeaText.setText(coffeTeaStringEsp);
         }
     }
 
-    public void setOnClickListeners(){
+    public void setOnClickListeners() {
 
         Button coffeeButton = (Button) view.findViewById(R.id.coffee_button);
         Button teaButton = (Button) view.findViewById(R.id.tea_button);
         Button neitherButton = (Button) view.findViewById(R.id.neither_button);
 
-        if(english == false) {
+        if (!english) {
             coffeeButton.setText("Café");
             teaButton.setText("Té");
             neitherButton.setText("ninguno");
         }
 
-        coffeeButton.setOnClickListener(new View.OnClickListener(){
+        coffeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 isCoffee = true;
@@ -101,7 +100,7 @@ public class CoffeeTea extends Fragment {
             }
         });
 
-        neitherButton.setOnClickListener(new View.OnClickListener(){
+        neitherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 isNeither = true;
@@ -111,7 +110,7 @@ public class CoffeeTea extends Fragment {
 
     }
 
-    public void loadFragment(){
+    public void loadFragment() {
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new OutdoorsIndoors());
@@ -119,8 +118,6 @@ public class CoffeeTea extends Fragment {
         fragmentTransaction.commit();
 
     }
-
-
 
 
 }

@@ -50,30 +50,29 @@ public class CollarNoCollar extends Fragment {
         return wearsCollar;
     }
 
-    public void setTextView(){
+    public void setTextView() {
 
         String wearsCollarString = "Does " + personLower + " usually wear a collar or no collar?";
         String wearsCollarStringEsp = "¿Prefiere llevar polos o camisetas?";
 
 
-        TextView wearsCollarText  = (TextView) view.findViewById(R.id.collar_no_collar);
+        TextView wearsCollarText = (TextView) view.findViewById(R.id.collar_no_collar);
 
 
-        if(english){
+        if (english) {
             wearsCollarText.setText(wearsCollarString);
-        }
-        else{
+        } else {
             wearsCollarText.setText(wearsCollarStringEsp);
         }
     }
 
 
-    public void setOnClickListeners(){
+    public void setOnClickListeners() {
 
         Button collarButton = (Button) view.findViewById(R.id.collar_button);
         Button noCollarButton = (Button) view.findViewById(R.id.no_collar_button);
 
-        if(english == false){
+        if (!english) {
             collarButton.setText("Polos");
             noCollarButton.setText("Camisetas");
         }
@@ -83,10 +82,9 @@ public class CollarNoCollar extends Fragment {
             public void onClick(View view) {
                 wearsCollar = true;
 
-                if(isAdult){
+                if (isAdult) {
                     loadFragmentAdult();
-                }
-                else{
+                } else {
                     loadFragmentChild();
                 }
             }
@@ -97,10 +95,9 @@ public class CollarNoCollar extends Fragment {
             public void onClick(View view) {
                 wearsCollar = false;
 
-                if(isAdult){
+                if (isAdult) {
                     loadFragmentAdult();
-                }
-                else{
+                } else {
                     loadFragmentChild();
                 }
             }
@@ -108,7 +105,7 @@ public class CollarNoCollar extends Fragment {
 
     }
 
-    public void loadFragmentAdult(){
+    public void loadFragmentAdult() {
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new BurgersOrFine());
@@ -117,7 +114,7 @@ public class CollarNoCollar extends Fragment {
 
     }
 
-    public void loadFragmentChild(){
+    public void loadFragmentChild() {
         fragmentManager = getActivity().getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new McDonaldsOrChucky());
