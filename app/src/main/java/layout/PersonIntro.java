@@ -49,6 +49,11 @@ public class PersonIntro extends Fragment {
 
     public void loadFirstQuestionPage(){
         Button nextOne = (Button) view.findViewById(R.id.next_one);
+
+        if(english == false){
+            nextOne.setText("Siguiente");
+        }
+
         nextOne.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

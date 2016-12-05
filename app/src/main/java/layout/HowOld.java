@@ -74,6 +74,12 @@ public class HowOld extends Fragment {
     public void addClickLister(){
 
         Button nextButton = (Button) view.findViewById(R.id.next2);
+
+        if(english == false){
+            nextButton.setText("Siguiente");
+        }
+
+
         nextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

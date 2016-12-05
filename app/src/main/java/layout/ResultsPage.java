@@ -33,11 +33,15 @@ public class ResultsPage extends Fragment {
         english = MainActivity.isEnglish();
         view = inflater.inflate(R.layout.fragment_results_page, container, false);
 
+        setTextView();
         // Inflate the layout for this fragment
         return view;
     }
 
     public void setTextView(){
+
+        String resultsTitle = "Gift Bug Results";
+        String resultsTitleEsp = "Los Resultados de Gift Bug";
 
         String resultsString = "Here are the results that we think " + personLower + " will love. (Clicking on an item will take you " +
                 "directly to the item\'s Amazon page.)";
@@ -45,12 +49,15 @@ public class ResultsPage extends Fragment {
         String resultsStringEsp = "Abajo son los regalos que se recomiendan. (Si usted hace clique abajo, le llevará a la página de Amazon.)";
 
         TextView resultsText = (TextView) view.findViewById(R.id.results_text);
+        TextView resultsTitleText = (TextView) view.findViewById(R.id.results_title);
 
         if(english) {
             resultsText.setText(resultsString);
+            resultsTitleText.setText(resultsTitle);
         }
         else {
             resultsText.setText(resultsStringEsp);
+            resultsTitleText.setText(resultsTitleEsp);
         }
 
     }
