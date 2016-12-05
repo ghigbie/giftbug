@@ -54,10 +54,22 @@ public class HowOld extends Fragment {
     public void changeText(){
 
         String question = "How old is " + personLower + "?";
+        String questionEsp = "¿Cuántos años tiene?";
 
         TextView textHowOld = (TextView) view.findViewById(R.id.how_old_text);
-        textHowOld.setText(question);
+        TextView textEnter = (TextView) view.findViewById(R.id.enter_age_text);
+
+        if(english){
+            textHowOld.setText(question);
+        }
+        else{
+            textHowOld.setText(questionEsp);
+            textEnter.setText("Por favor, entre la edad abajo");
+        }
+
     }
+
+
 
     public void addClickLister(){
 

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
@@ -33,6 +34,11 @@ public class ManWomanBoyGirl extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_man_woman_boy_girl, container, false);
         // Inflate the layout for this fragment
+
+        TextView manWomanText = (TextView) view.findViewById(R.id.person_gender_age);
+        if(english == false){
+            manWomanText.setText("¿Es hombre, mujer, chico o chica?");
+        }
 
         createOnClickEvents();
         return view;
@@ -62,6 +68,13 @@ public class ManWomanBoyGirl extends Fragment {
         Button womanButton = (Button) view.findViewById(R.id.woman_button);
         Button boyButton = (Button) view.findViewById(R.id.boy_button);
         Button girlButton = (Button) view.findViewById(R.id.girl_button);
+
+        if(english == false){
+            manButton.setText("Homebre");
+            womanButton.setText("Mujer");
+            boyButton.setText("Chico");
+            girlButton.setText("Chica");
+        }
 
         manButton.setOnClickListener(new View.OnClickListener(){
             @Override
