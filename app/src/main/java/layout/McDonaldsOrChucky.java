@@ -49,10 +49,18 @@ public class McDonaldsOrChucky extends Fragment {
 
     public void setTextView(){
 
-        String mcDonaldsString = "Does " + personLower + " prefer McDonalds or Chuck-e-Cheese?";
+        String mcDonaldsString = "Does " + personLower + " prefer McDonalds or Chuck E. Cheese's?";
+        String mcDonaldsStringEsp = "¿Prefiere comer en McDonalds o Chuck E. Cheese's?";
+
 
         TextView mcDonaldsText = (TextView) view.findViewById(R.id.mcdonald_or_chucky);
-        mcDonaldsText.setText(mcDonaldsString);
+
+        if(english){
+            mcDonaldsText.setText(mcDonaldsString);
+        }
+        else{
+            mcDonaldsText.setText(mcDonaldsStringEsp);
+        }
 
     }
 
@@ -64,6 +72,7 @@ public class McDonaldsOrChucky extends Fragment {
 
         Button mcDonaldsButton = (Button) view.findViewById(R.id.mcdonald_button);
         Button chuckyButton = (Button) view.findViewById(R.id.chucky_button);
+
 
         mcDonaldsButton.setOnClickListener(new View.OnClickListener(){
 

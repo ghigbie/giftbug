@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
@@ -29,6 +30,13 @@ public class PersonIntro extends Fragment {
 
         english = MainActivity.isEnglish();
         view = inflater.inflate(R.layout.fragment_person_intro, container, false);
+
+        TextView personIntroText = (TextView) view.findViewById(R.id.personThink);
+
+        if(english == false){
+            personIntroText.setText("Por favor, tome un momento para pensar en la persoan a quien le quiesera " +
+                    "comprar un regalo. Después haga clique abajo.");
+        }
 
         loadFirstQuestionPage();
 

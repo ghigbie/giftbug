@@ -54,8 +54,16 @@ public class OutdoorsIndoors extends Fragment {
 
     private void setTextView(){
         String outdoorsString = "Does " + personLower + " prefer the outdoors or the indoors?";
+        String outdoorsStringEsp = "¿Prefiere pasar tiempo fuera de la casa o dentro de la casa?";
+
         TextView outdoorText = (TextView) view.findViewById(R.id.outdoors_indoors);
-        outdoorText.setText(outdoorsString);
+
+        if(english){
+            outdoorText.setText(outdoorsString);
+        }
+        else{
+            outdoorText.setText(outdoorsStringEsp);
+        }
 
     }
 
@@ -63,6 +71,11 @@ public class OutdoorsIndoors extends Fragment {
 
         Button outdoorsButton = (Button) view.findViewById(R.id.outdoors_button);
         Button indoorsButton = (Button) view.findViewById(R.id.indoors_button);
+
+        if(english == false){
+            outdoorsButton.setText("Fuera de la Casa");
+            indoorsButton.setText("Dentro de la Casa");
+        }
 
         outdoorsButton.setOnClickListener(new View.OnClickListener() {
             @Override
