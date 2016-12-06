@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.geogehigbie.giftbug.Gift;
 import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
@@ -60,6 +61,11 @@ public class ResultsPage extends Fragment {
             resultsTitleText.setText(resultsTitleEsp);
         }
 
+    }
+
+    public void createGifts(){
+
+        Gift teaset = new Gift()
     }
 
 

@@ -12,64 +12,18 @@ public class Gift {
     private ImageView imageGift;
     private TextView  titleGift;
     private TextView descriptionGift;
-    private String titleString;
-    private String descriptionString;
 
-    public Gift(ImageView ImageGift, TextView TitleGift, TextView DescriptionGift){
+    private String imageURLString;
+    private String titleGiftString;
+    private String descriptionGiftString;
 
-        this.imageGift = ImageGift;
-        this.titleGift = TitleGift;
-        this.descriptionGift =  DescriptionGift;
+    public Gift(String ImageURLString, String TitleGiftString, String DescriptionGiftString){
 
-    }
-
-    public TextView getDescriptionGift() {
-        return descriptionGift;
+        this.imageURLString = ImageURLString;
+        this.titleGiftString = TitleGiftString;
+        this.descriptionGiftString =  DescriptionGiftString;
     }
 
 
-    public void setDescriptionGift(TextView descriptionGift) {
-        this.descriptionGift = descriptionGift;
-    }
-
-
-    public String getDescriptionString() {
-        return descriptionString;
-    }
-
-
-    public void setDescriptionString(String descriptionString) {
-        this.descriptionString = descriptionString;
-    }
-
-
-    public ImageView getImageGift() {
-        return imageGift;
-    }
-
-
-    public void setImageGift(ImageView imageGift) {
-        this.imageGift = imageGift;
-    }
-
-
-    public TextView getTitleGift() {
-        return titleGift;
-    }
-
-
-    public void setTitleGift(TextView titleGift) {
-        this.titleGift = titleGift;
-    }
-
-
-    public String getTitleString() {
-        return titleString;
-    }
-
-
-    public void setTitleString(String titleString) {
-        this.titleString = titleString;
-    }
 
 }
