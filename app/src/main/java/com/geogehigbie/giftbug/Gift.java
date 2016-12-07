@@ -11,17 +11,17 @@ public class Gift {
 
     private ImageView imageGift;
     private TextView  titleGift;
-    private TextView descriptionGift;
+   // private TextView descriptionGift;
 
     private String imageURLString;
     private String titleGiftString;
     private String descriptionGiftString;
 
-    public Gift(String ImageURLString, String TitleGiftString, String DescriptionGiftString){
+    public Gift(String ImageURLString, String TitleGiftString){
 
         this.imageURLString = ImageURLString;
         this.titleGiftString = TitleGiftString;
-        this.descriptionGiftString =  DescriptionGiftString;
+        //this.descriptionGiftString =  DescriptionGiftString;
     }
 
 

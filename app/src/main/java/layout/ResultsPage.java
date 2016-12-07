@@ -13,6 +13,9 @@ import com.geogehigbie.giftbug.Gift;
 import com.geogehigbie.giftbug.MainActivity;
 import com.geogehigbie.giftbug.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ResultsPage extends Fragment {
 
@@ -26,6 +29,8 @@ public class ResultsPage extends Fragment {
     private static boolean english;
 
     private static boolean prefersBurgers;
+
+    private List<Gift> giftsList;
 
 
     @Override
@@ -65,36 +70,46 @@ public class ResultsPage extends Fragment {
 
     public void createGifts(){
 
+        giftsList = new ArrayList<Gift>();
+
         Gift teaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-               "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags", "An assorment of tea.");
+               "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
 
         Gift coffeeSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags", "An assorment of tea.");
+                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
 
         Gift hikingKit = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags", "An assorment of tea.");
+                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
 
         Gift indoorKit = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags", "An assorment of tea.");
+                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
 
         Gift moanaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91D2iXJCd6L._SL1500_.jpg",
-                "Disney Collection Moana Figurine Playset", "A set of toys from Disney\'s Moana");
+                "Disney Collection Moana Figurine Playset");
 
         Gift moanaBlanket = new Gift("https://images-na.ssl-images-amazon.com/images/I/91lwegBjmiL._SL1500_.jpg",
-                "Disney Moana \'The Wave\' 62\" x 90\" Twin Blanket", "A bed set from the disney movie Moana");
+                "Disney Moana \'The Wave\' 62\" x 90\" Twin Blanket");
 
         Gift outdoorJacket = new Gift("https://images-na.ssl-images-amazon.com/images/I/91Obdum2ShL._UL1500_.jpg",
-                "The North Face Men's Venture Jacket", "A jacket for outdoor people");
+                "The North Face Men's Venture Jacket");
 
         Gift outdoorJacketW = new Gift("https://images-na.ssl-images-amazon.com/images/I/81nTqJxMWFL._SL1500_.jpg",
-                "The North Face Women's Venture Jacket", "A jacket for outdoor people");
+                "The North Face Women's Venture Jacket");
 
         Gift speakerBass = new Gift ("https://images-na.ssl-images-amazon.com/images/I/31STZw0kV5L.jpg",
-                "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)", "A speaker");
+                "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)");
+
+        Gift campingKnife = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71PEGYL2WpL._SL1500_.jpg",
+                "New 6-in-1 Best Survival Knife Ultimate Survival Tool Zombie Survival Kit Tactical Folding Knife Seatbelt " +
+                        "Cutter Glass Breaker Fire Starter LED Light Bottle Opener Hunting Camping Rambo Knife");
+
+        Gift movieTickets = new Gift ("https://images-na.ssl-images-amazon.com/images/I/91bQ7OB3qrL._SL1500_.jpg",
+                "Regal Entertainment Gift Card");
+
+        Gift starbucksCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/516nsy8Rf2L.jpg",
+                "Starbucks Gift Card");
 
     }
-
-
 
 
 
