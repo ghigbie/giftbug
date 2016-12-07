@@ -32,6 +32,15 @@ public class ResultsPage extends Fragment {
 
     private List<Gift> giftsList;
 
+    //these variables need to be defined
+    private boolean burgers;
+    private boolean fine;
+    private boolean collar;
+    private boolean outdoors;
+    private boolean indoors;
+    private boolean coffee;
+    private boolean tea;
+    private boolean neitherCoffeeTea;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -108,6 +117,43 @@ public class ResultsPage extends Fragment {
 
         Gift starbucksCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/516nsy8Rf2L.jpg",
                 "Starbucks Gift Card");
+
+
+        //the first decision is if the person an adult
+        if(isAdult) {
+            if (burgers) {
+                giftsList.add(moanaSet);
+            }
+
+            if (fine) {
+                giftsList.add(moanaBlanket);
+            }
+
+            if (coffee) {
+                giftsList.add(coffeeSet);
+            }
+
+            if (tea) {
+                giftsList.add(teaSet);
+            }
+            if(hasYChromosome){
+                giftsList.add(outdoorJacket);
+
+            }else{
+                giftsList.add(outdoorJacketW);
+            }
+        }
+
+        if(!isAdult){
+
+        }
+
+        if(!isAdult){
+
+        }
+
+
+
 
     }
 
