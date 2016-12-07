@@ -83,6 +83,14 @@ public class ResultsPage extends Fragment {
         Gift moanaBlanket = new Gift("https://images-na.ssl-images-amazon.com/images/I/91lwegBjmiL._SL1500_.jpg",
                 "Disney Moana \'The Wave\' 62\" x 90\" Twin Blanket", "A bed set from the disney movie Moana");
 
+        Gift outdoorJacket = new Gift("https://images-na.ssl-images-amazon.com/images/I/91Obdum2ShL._UL1500_.jpg",
+                "The North Face Men's Venture Jacket", "A jacket for outdoor people");
+
+        Gift outdoorJacketW = new Gift("https://images-na.ssl-images-amazon.com/images/I/81nTqJxMWFL._SL1500_.jpg",
+                "The North Face Women's Venture Jacket", "A jacket for outdoor people");
+
+        Gift
+
     }
 
 
