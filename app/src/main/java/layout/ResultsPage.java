@@ -89,7 +89,8 @@ public class ResultsPage extends Fragment {
         Gift outdoorJacketW = new Gift("https://images-na.ssl-images-amazon.com/images/I/81nTqJxMWFL._SL1500_.jpg",
                 "The North Face Women's Venture Jacket", "A jacket for outdoor people");
 
-        Gift
+        Gift speakerBass = new Gift ("https://images-na.ssl-images-amazon.com/images/I/31STZw0kV5L.jpg",
+                "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)", "A speaker");
 
     }
 
