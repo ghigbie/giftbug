@@ -216,11 +216,69 @@ public class ResultsPage extends Fragment {
             }
         }
 
+        if(hasYChromosome)
+
         if(!isAdult){
 
         }
 
+
         if(!isAdult){
+
+        }
+
+
+        if(isSixties){
+
+        }
+
+
+        if(isFifties){
+
+        }
+
+
+        if(isForties){
+
+        }
+
+
+        if(isThirties){
+
+        }
+
+
+        if(isTwenties){
+
+
+        }
+
+
+
+        if(isCollege){
+
+        }
+
+
+
+        if(isTeenager){
+
+        }
+
+
+
+        if(isChild){
+
+        }
+
+
+
+        if(isYoungChild){
+
+        }
+
+
+        if(isTodler){
 
         }
 
