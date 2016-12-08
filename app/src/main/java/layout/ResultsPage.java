@@ -139,94 +139,125 @@ public class ResultsPage extends Fragment {
         giftsList = new ArrayList<Gift>();
 
         Gift teaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-               "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
+               "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags",
+                "");
 
         Gift coffeeSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
+                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags",
+                "");
 
         Gift hikingKit = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
+                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags",
+                "");
 
         Gift indoorKit = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
-                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
+                "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags",
+                "");
 
         Gift blueToothInner = new Gift("https://images-na.ssl-images-amazon.com/images/I/51kQWdlT5XL._SL1000_.jpg" ,  "TaoTronics Bluetooth Headphones, Wireless 4.1 Magnetic Earbuds Stereo Earphones," +
-                " Secure Fit for Sports with Built-in Mic [Upgraded Version]");
+                " Secure Fit for Sports with Built-in Mic [Upgraded Version]",
+                "");
 
-        Gift blueToothOver = new Gift("" , "");
+        Gift blueToothOver = new Gift("" , "",
+                "");
 
         Gift amazonEchoDot = new Gift("https://images-na.ssl-images-amazon.com/images/I/51e6qOUDF8L._SY300_.jpg",
-                "All-New Echo Dot (2nd Generation) - White");
+                "All-New Echo Dot (2nd Generation) - White",
+                "");
 
         Gift bb8Spheer = new Gift("https://images-na.ssl-images-amazon.com/images/I/815hK0bAmEL._SL1500_.jpg",
+                "",
                 "");
 
         Gift cheeseCakeCard = new Gift("https://images-na.ssl-images-amazon.com/images/I/51RmNyUjWOL.jpg" ,
-                "The Cheesecake Factory Gift Card");
+                "The Cheesecake Factory Gift Card",
+                "");
 
         Gift pfChangCard = new Gift("https://images-na.ssl-images-amazon.com/images/I/91iLx-NzZfL._SL1500_.jpg",
-                "P.F. Changs Gift Card");
+                "P.F. Changs Gift Card",
+                "");
 
         Gift moanaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91D2iXJCd6L._SL1500_.jpg",
-                "Disney Collection Moana Figurine Playset");
+                "Disney Collection Moana Figurine Playset",
+                "");
 
         Gift moanaBlanket = new Gift("https://images-na.ssl-images-amazon.com/images/I/91lwegBjmiL._SL1500_.jpg",
-                "Disney Moana \'The Wave\' 62\" x 90\" Twin Blanket");
+                "Disney Moana \'The Wave\' 62\" x 90\" Twin Blanket",
+                "");
 
         Gift outdoorJacket = new Gift("https://images-na.ssl-images-amazon.com/images/I/91Obdum2ShL._UL1500_.jpg",
-                "The North Face Men's Venture Jacket");
+                "The North Face Men's Venture Jacket",
+                "");
 
         Gift outdoorJacketW = new Gift("https://images-na.ssl-images-amazon.com/images/I/81nTqJxMWFL._SL1500_.jpg",
-                "The North Face Women's Venture Jacket");
+                "The North Face Women's Venture Jacket",
+                "");
 
         Gift speakerBass = new Gift ("https://images-na.ssl-images-amazon.com/images/I/31STZw0kV5L.jpg",
-                "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)");
+                "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)",
+                "");
 
         Gift campingKnife = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71PEGYL2WpL._SL1500_.jpg",
                 "New 6-in-1 Best Survival Knife Ultimate Survival Tool Zombie Survival Kit Tactical Folding Knife Seatbelt " +
-                        "Cutter Glass Breaker Fire Starter LED Light Bottle Opener Hunting Camping Rambo Knife");
+                        "Cutter Glass Breaker Fire Starter LED Light Bottle Opener Hunting Camping Rambo Knife",
+                "");
 
         Gift movieTickets = new Gift ("https://images-na.ssl-images-amazon.com/images/I/91bQ7OB3qrL._SL1500_.jpg",
-                "Regal Entertainment Gift Card");
+                "Regal Entertainment Gift Card",
+                "");
 
         Gift starbucksCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/516nsy8Rf2L.jpg",
-                "Starbucks Gift Card");
+                "Starbucks Gift Card",
+                "");
 
-        Gift tacoBellCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/417Hr78EBVL.jpg", "Taco Bell Gift Card");
+        Gift tacoBellCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/417Hr78EBVL.jpg", "Taco Bell Gift Card",
+                "");
 
-        Gift burgerKindCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71EXhd%2BUxOL._SL1500_.jpg", "Burger King Gift Card");
+        Gift burgerKindCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71EXhd%2BUxOL._SL1500_.jpg", "Burger King Gift Card",
+                "");
 
-        Gift subwayGiftCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81fzr22XyOL._SL1500_.jpg", "SUBWAY Gift Card");
+        Gift subwayGiftCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81fzr22XyOL._SL1500_.jpg", "SUBWAY Gift Card",
+                "");
 
         Gift kindleSet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/91a7qlSdjTL._SL1500_.jpg",
-                "Kindle Paperwhite E-reader - Black, 6\" High-Resolution Display (300 ppi) with Built-in Light, Wi-Fi - Includes Special Offers");
+                "Kindle Paperwhite E-reader - Black, 6\" High-Resolution Display (300 ppi) with Built-in Light, Wi-Fi - Includes Special Offers",
+                "");
 
-        Gift paneraCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/818%2B%2BmRB-ZL._SL1500_.jpg", "Panera Bread Gift Card");
+        Gift paneraCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/818%2B%2BmRB-ZL._SL1500_.jpg", "Panera Bread Gift Card",
+                "");
 
         Gift womensWatch = new Gift ("https://images-na.ssl-images-amazon.com/images/I/412Xe9-8H6L._SY220_.jpg",
-                "Anne Klein Women's AK/2245RTST Swarovski Crystal Accented Rose Gold-Tone and Silver-Tone Bangle Watch and Bracelet Set");
+                "Anne Klein Women's AK/2245RTST Swarovski Crystal Accented Rose Gold-Tone and Silver-Tone Bangle Watch and Bracelet Set",
+                "");
 
         Gift mixer = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81UknzEqmhL._SL1500_.jpg",
-                "KitchenAid KSM150PSER Artisan Tilt-Head Stand Mixer with Pouring Shield, 5-Quart, Empire Red");
+                "KitchenAid KSM150PSER Artisan Tilt-Head Stand Mixer with Pouring Shield, 5-Quart, Empire Red",
+                "");
 
         Gift todlerTakeAlong = new Gift ("https://images-na.ssl-images-amazon.com/images/I/41szCbN2t5L.jpg",
-                "Baby Einstein Take Along Tunes Musical Toy");
+                "Baby Einstein Take Along Tunes Musical Toy",
+                "");
 
         //these are the gifts for babies
         Gift babyBullet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/814ykZ%2BVs5L._SL1500_.jpg",
-                "Magic Bullet Baby Bullet Baby Care System");
+                "Magic Bullet Baby Bullet Baby Care System",
+                "");
 
         Gift babyDiningSet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71JH4pj3fML._SX522_.jpg",
-                "Rainbow Gift Set Orange. Baby Shower, Baby Registry, Home Set & more. Baby Girl, Baby Boy, Unisex. Baby Bowl Set + Baby Plate Set");
+                "Rainbow Gift Set Orange. Baby Shower, Baby Registry, Home Set & more. Baby Girl, Baby Boy, Unisex. Baby Bowl Set + Baby Plate Set",
+                "");
 
         Gift babyBoyPlaySet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71U%2BSGw6QfL._SL1500_.jpg",
-                "Gund My First Sports Bag Playset");
+                "Gund My First Sports Bag Playset",
+                "");
 
         Gift babyGirlHeadBand = new Gift ("https://images-na.ssl-images-amazon.com/images/I/51vWXt85Y0L._SX38_SY50_CR,0,0,38,50_.jpg",
-                "ROEWELL® Baby's Headbands Girl's Cute Hair Bows Hair bands Newborn headband");
+                "ROEWELL® Baby's Headbands Girl's Cute Hair Bows Hair bands Newborn headband",
+                "");
 
         Gift babyToy = new Gift ("https://images-na.ssl-images-amazon.com/images/I/5187Np-hSXL.jpg",
-                "VTech Baby Lil' Critters Moosical Beads");
+                "VTech Baby Lil' Critters Moosical Beads",
+                "");
         //this is the end of the list of baby gifts
 
 
