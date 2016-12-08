@@ -127,7 +127,11 @@ public class ResultsPage extends Fragment {
         Gift kindleSet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/91a7qlSdjTL._SL1500_.jpg",
                 "Kindle Paperwhite E-reader - Black, 6\" High-Resolution Display (300 ppi) with Built-in Light, Wi-Fi - Includes Special Offers");
 
-        Gift paneraCard = new Gi
+        Gift paneraCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/818%2B%2BmRB-ZL._SL1500_.jpg", "Panera Bread Gift Card");
+
+        Gift womensWatch = new Gift ("https://images-na.ssl-images-amazon.com/images/I/412Xe9-8H6L._SY220_.jpg",
+                "Anne Klein Women's AK/2245RTST Swarovski Crystal Accented Rose Gold-Tone and Silver-Tone Bangle Watch and Bracelet Set");
+
 
 
         //the first decision is if the person an adult
