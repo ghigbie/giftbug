@@ -209,6 +209,8 @@ public class ResultsPage extends Fragment {
         Gift mixer = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81UknzEqmhL._SL1500_.jpg",
                 "KitchenAid KSM150PSER Artisan Tilt-Head Stand Mixer with Pouring Shield, 5-Quart, Empire Red");
 
+        Gift todlerTakeAlong = new Gift ("https://images-na.ssl-images-amazon.com/images/I/41szCbN2t5L.jpg",
+                "Baby Einstein Take Along Tunes Musical Toy");
 
         //these are the gifts for babies
         Gift babyBullet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/814ykZ%2BVs5L._SL1500_.jpg",
@@ -332,6 +334,8 @@ public class ResultsPage extends Fragment {
 
         if(isTodler){
             giftsList.clear();
+
+            giftsList.add(todlerTakeAlong);
 
             if(hasYChromosome){
 

@@ -15,13 +15,13 @@ public class Gift {
 
     private String imageURLString;
     private String titleGiftString;
-    private String descriptionGiftString;
+    private String locationGiftString;
 
-    public Gift(String ImageURLString, String TitleGiftString){
+    public Gift(String ImageURLString, String TitleGiftString, String LocationGiftString){
 
         this.imageURLString = ImageURLString;
         this.titleGiftString = TitleGiftString;
-        //this.descriptionGiftString =  DescriptionGiftString;
+        this.locationGiftString = LocationGiftString;
     }
 
 
