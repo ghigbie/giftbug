@@ -150,6 +150,8 @@ public class ResultsPage extends Fragment {
         Gift indoorKit = new Gift("https://images-na.ssl-images-amazon.com/images/I/91LTtbcJH7L._SX522_.jpg",
                 "Wissotzky Tea, The Journey Collection, Tea Lovers Assortment 80 Sealed Bags");
 
+        Gift
+
         Gift moanaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91D2iXJCd6L._SL1500_.jpg",
                 "Disney Collection Moana Figurine Playset");
 
@@ -230,6 +232,7 @@ public class ResultsPage extends Fragment {
 
         if(isSixties){
 
+
         }
 
 
@@ -280,10 +283,12 @@ public class ResultsPage extends Fragment {
 
         if(isTodler){
 
+
         }
 
 
         if(isBaby){
+
 
         }
 
