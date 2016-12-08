@@ -153,7 +153,19 @@ public class ResultsPage extends Fragment {
         Gift blueToothInner = new Gift("https://images-na.ssl-images-amazon.com/images/I/51kQWdlT5XL._SL1000_.jpg" ,  "TaoTronics Bluetooth Headphones, Wireless 4.1 Magnetic Earbuds Stereo Earphones," +
                 " Secure Fit for Sports with Built-in Mic [Upgraded Version]");
 
-        Gift blueToothOver = new Gift("")
+        Gift blueToothOver = new Gift("" , "");
+
+        Gift amazonEchoDot = new Gift("https://images-na.ssl-images-amazon.com/images/I/51e6qOUDF8L._SY300_.jpg",
+                "All-New Echo Dot (2nd Generation) - White");
+
+        Gift bb8Spheer = new Gift("https://images-na.ssl-images-amazon.com/images/I/815hK0bAmEL._SL1500_.jpg",
+                "");
+
+        Gift cheeseCakeCard = new Gift("https://images-na.ssl-images-amazon.com/images/I/51RmNyUjWOL.jpg" ,
+                "The Cheesecake Factory Gift Card");
+
+        Gift pfChangCard = new Gift("https://images-na.ssl-images-amazon.com/images/I/91iLx-NzZfL._SL1500_.jpg",
+                "P.F. Changs Gift Card");
 
         Gift moanaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91D2iXJCd6L._SL1500_.jpg",
                 "Disney Collection Moana Figurine Playset");
@@ -194,6 +206,26 @@ public class ResultsPage extends Fragment {
         Gift womensWatch = new Gift ("https://images-na.ssl-images-amazon.com/images/I/412Xe9-8H6L._SY220_.jpg",
                 "Anne Klein Women's AK/2245RTST Swarovski Crystal Accented Rose Gold-Tone and Silver-Tone Bangle Watch and Bracelet Set");
 
+        Gift mixer = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81UknzEqmhL._SL1500_.jpg",
+                "KitchenAid KSM150PSER Artisan Tilt-Head Stand Mixer with Pouring Shield, 5-Quart, Empire Red");
+
+
+        //these are the gifts for babies
+        Gift babyBullet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/814ykZ%2BVs5L._SL1500_.jpg",
+                "Magic Bullet Baby Bullet Baby Care System");
+
+        Gift babyDiningSet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71JH4pj3fML._SX522_.jpg",
+                "Rainbow Gift Set Orange. Baby Shower, Baby Registry, Home Set & more. Baby Girl, Baby Boy, Unisex. Baby Bowl Set + Baby Plate Set");
+
+        Gift babyBoyPlaySet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71U%2BSGw6QfL._SL1500_.jpg",
+                "Gund My First Sports Bag Playset");
+
+        Gift babyGirlHeadBand = new Gift ("https://images-na.ssl-images-amazon.com/images/I/51vWXt85Y0L._SX38_SY50_CR,0,0,38,50_.jpg",
+                "ROEWELL® Baby's Headbands Girl's Cute Hair Bows Hair bands Newborn headband");
+
+        Gift babyToy = new Gift ("https://images-na.ssl-images-amazon.com/images/I/5187Np-hSXL.jpg",
+                "VTech Baby Lil' Critters Moosical Beads");
+        //this is the end of the list of baby gifts
 
 
         //the first decision is if the person an adult
@@ -274,23 +306,60 @@ public class ResultsPage extends Fragment {
 
 
         if(isChild){
+            if(hasYChromosome){
+
+            }
+
+            if(!hasYChromosome){
+
+            }
 
         }
 
 
 
         if(isYoungChild){
+            if(hasYChromosome){
+
+            }
+
+            if(!hasYChromosome){
+
+            }
 
         }
 
 
         if(isTodler){
+            giftsList.clear();
+
+            if(hasYChromosome){
+
+            }
+
+            if(!hasYChromosome){
+
+            }
 
 
         }
 
 
         if(isBaby){
+            giftsList.clear();
+
+            giftsList.add(babyBullet);
+            giftsList.add(babyDiningSet);
+            giftsList.add(babyToy);
+
+            if(hasYChromosome){
+                giftsList.add(babyBoyPlaySet);
+
+            }
+
+            if(!hasYChromosome){
+                giftsList.add(babyGirlHeadBand);
+            }
 
 
         }
