@@ -118,7 +118,16 @@ public class ResultsPage extends Fragment {
         Gift starbucksCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/516nsy8Rf2L.jpg",
                 "Starbucks Gift Card");
 
-        Gift mcDonaldsCard = new Gift ("something", "somedthing");
+        Gift tacoBellCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/417Hr78EBVL.jpg", "Taco Bell Gift Card");
+
+        Gift burgerKindCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71EXhd%2BUxOL._SL1500_.jpg", "Burger King Gift Card");
+
+        Gift subwayGiftCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81fzr22XyOL._SL1500_.jpg", "SUBWAY Gift Card");
+
+        Gift kindleSet = new Gift ("https://images-na.ssl-images-amazon.com/images/I/91a7qlSdjTL._SL1500_.jpg",
+                "Kindle Paperwhite E-reader - Black, 6\" High-Resolution Display (300 ppi) with Built-in Light, Wi-Fi - Includes Special Offers");
+
+        Gift paneraCard = new Gi
 
 
         //the first decision is if the person an adult
