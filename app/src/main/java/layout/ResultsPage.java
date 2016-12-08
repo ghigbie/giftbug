@@ -28,6 +28,8 @@ public class ResultsPage extends Fragment {
     private static boolean isAdult;
     private static boolean english;
 
+
+
     private static boolean prefersBurgers;
 
     private List<Gift> giftsList;
@@ -42,6 +44,21 @@ public class ResultsPage extends Fragment {
     private boolean tea;
     private boolean neitherCoffeeTea;
 
+
+    private boolean isSixties;
+    private boolean isFifties;
+    private boolean isForties;
+    private boolean isThirties;
+    private boolean isTwenties;
+    private boolean isCollege;
+    private boolean isTeenager;
+    private boolean isPreTeen;
+    private boolean isChild;
+    private boolean isYoungChild;
+    private boolean isTodler;
+    private boolean isBaby;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,6 +68,46 @@ public class ResultsPage extends Fragment {
         setTextView();
         // Inflate the layout for this fragment
         return view;
+    }
+
+    public void determineAgeClass(){
+        int age = HowOld.getAge();
+
+        if(age >= 60){
+            isSixties = true;
+        }
+        else if(age <= 59 && age >=50){
+            isFifties = true;
+        }
+        else if(age <= 49 && age >=40){
+            isForties = true;
+        }
+        else if(age <= 39 && age >=30){
+            isThirties = true;
+        }
+        else if(age <= 29 && age >= 23){
+            isTwenties = true;
+        }
+        else if(age <= 22 && age >= 18){
+            isCollege = true;
+        }
+        else if(age <= 17 && age >= 13){
+            isTeenager= true;
+        }
+        else if(age <= 12 && age >= 8){
+            isChild = true;
+        }
+        else if(age <= 7 && age >= 5){
+            isYoungChild = true;
+        }
+        else if(age <= 4 && age >= 3 ){
+            isTodler = true;
+        }
+        else if(age <= 2){
+            isBaby = true;
+        }
+
+
     }
 
     public void setTextView(){
@@ -164,6 +221,11 @@ public class ResultsPage extends Fragment {
         }
 
         if(!isAdult){
+
+        }
+
+
+        if(isBaby){
 
         }
 
