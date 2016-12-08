@@ -118,6 +118,8 @@ public class ResultsPage extends Fragment {
         Gift starbucksCard = new Gift ("https://images-na.ssl-images-amazon.com/images/I/516nsy8Rf2L.jpg",
                 "Starbucks Gift Card");
 
+        Gift mcDonaldsCard = new Gift ("something", "somedthing");
+
 
         //the first decision is if the person an adult
         if(isAdult) {
