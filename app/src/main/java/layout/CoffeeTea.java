@@ -29,7 +29,6 @@ public class CoffeeTea extends Fragment {
 
     private static boolean isCoffee;
     private static boolean isTea;
-    private static boolean isBoth;
 
 
     @Override
@@ -54,9 +53,6 @@ public class CoffeeTea extends Fragment {
         return isCoffee;
     }
 
-    public static boolean isBoth() {
-        return isBoth;
-    }
 
     public static boolean isTea() {
         return isTea;
