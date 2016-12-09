@@ -22,6 +22,7 @@
     <string name="coffee_tea">Does he or she drink coffee, tea, or neither?</string>
     <string name="coffee">Coffee</string>
     <string name="tea">Tea</string>
+    <string name="both">Both</string>
     <string name="neither">Neither</string>
     <string name="soda_juice">Does he or she drink soda, juice, or neither?</string>
     <string name="soda">Soda</string>

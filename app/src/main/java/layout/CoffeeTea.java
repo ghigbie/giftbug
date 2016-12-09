@@ -28,7 +28,8 @@ public class CoffeeTea extends Fragment {
 
 
     private static boolean isCoffee;
-    private static boolean isNeither;
+    private static boolean isTea;
+    private static boolean isBoth;
 
 
     @Override
@@ -54,7 +55,7 @@ public class CoffeeTea extends Fragment {
     }
 
     public static boolean isNeither() {
-        return isNeither;
+        return isBoth;
     }
 
     public void setTextView() {
@@ -77,6 +78,7 @@ public class CoffeeTea extends Fragment {
         Button coffeeButton = (Button) view.findViewById(R.id.coffee_button);
         Button teaButton = (Button) view.findViewById(R.id.tea_button);
         Button neitherButton = (Button) view.findViewById(R.id.neither_button);
+        Button bothButton = (Button) view.findViewById(R.id.both_button);
 
         if (!english) {
             coffeeButton.setText("Café");
@@ -95,7 +97,7 @@ public class CoffeeTea extends Fragment {
         teaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isCoffee = false;
+                isTea = true;
                 loadFragment();
             }
         });
@@ -103,7 +105,15 @@ public class CoffeeTea extends Fragment {
         neitherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isNeither = true;
+                isBoth = false;
+                loadFragment();
+            }
+        });
+
+        bothButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isBoth = true;
                 loadFragment();
             }
         });

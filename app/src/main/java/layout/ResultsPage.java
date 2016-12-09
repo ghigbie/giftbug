@@ -42,7 +42,6 @@ public class ResultsPage extends Fragment {
     private boolean indoors;
     private boolean coffee;
     private boolean tea;
-    private boolean neitherCoffeeTea;
 
 
     private boolean isSixties;
@@ -70,6 +69,10 @@ public class ResultsPage extends Fragment {
         setTextView();
         // Inflate the layout for this fragment
         return view;
+    }
+
+    public void defineVariables(){
+
     }
 
     public void determineAgeClass(){
