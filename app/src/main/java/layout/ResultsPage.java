@@ -16,6 +16,8 @@ import com.geogehigbie.giftbug.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.R.string.no;
+
 
 public class ResultsPage extends Fragment {
 
@@ -144,7 +146,8 @@ public class ResultsPage extends Fragment {
 
         Gift coffeeSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/71yQ5cmW9jL._SX522_.jpg",
                 "Treasure Chest of Coffee",
-                "");
+                "https://www.amazon.com/Coffee-Beanery-2590215-Treasure-Chest/dp/B00GR9EM3O/ref=sr_1_4_a_it?ie=UTF8&qid=14812374" +
+                        "41&sr=8-4&keywords=coffee+assortment+gift");
 
         Gift blueToothInner = new Gift("https://images-na.ssl-images-amazon.com/images/I/51kQWdlT5XL._SL1000_.jpg" ,
                 "TaoTronics Bluetooth Headphones, Wireless 4.1 Magnetic Earbuds Stereo Earphones," +
@@ -197,6 +200,23 @@ public class ResultsPage extends Fragment {
                 "The North Face Women's Venture Jacket",
                 "https://www.amazon.com/North-Face-Womens-Venture-Jacket/dp/B00DH3CX5W/ref=sr_1_1?ie=UTF8&qid=148123600" +
                         "6&sr=8-1&keywords=The+North+Face+Woman%27s+Venture+Jacket");
+
+        Gift watchMen = new Gift ("https://images-na.ssl-images-amazon.com/images/I/91vt0ip-%2BAL._UY879_.jpg",
+                "Lucien Piccard Men's LP-40025-01 Del Campo Analog Display Japanese Quartz Black Watch",
+                "https://www.amazon.com/gp/product/B013JXIJZM/ref=s9_acsd_aas_bw_c_x_1_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-" +
+                        "3&pf_rd_r=26XQXMEFZVBNXVHQ9BD8&pf_rd_r=26XQXMEFZVBNXVHQ9BD8&pf_rd_t=101&pf_rd_p=0b437a34-f4bc-406f-b110-" +
+                        "a8df870fce27&pf_rd_p=0b437a34-f4bc-406f-b110-a8df870fce27&pf_rd_i=15563170011");
+
+        Gift casioWatchM = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71PXyslIUyL._UX679_.jpg",
+                "Casio G-Shock GA100-1A2 Ana-Digi Speed Indicator Black Dial Men's Watch",
+                "https://www.amazon.com/Casio-G-Shock-GA100-1A2-Ana-Digi-Indicator/dp/B007V2ZZWS/ref=sr_1_8?s=apparel&ie=UTF8&qid=148124" +
+                        "5363&sr=1-8&nodeID=7141123011&keywords=casio+g-shock");
+
+        Gift casioWatchW = new Gift ("https://images-na.ssl-images-amazon.com/images/I/71BLnL1lfvL._UY879_.jpg",
+                "Casio Women's BA-111-1ACR Baby-G Analog-Digital Display Quartz Black Watch",
+                "https://www.amazon.com/Casio-Womens-BA-111-1ACR-Analog-Digital-Display/dp/B00J6AH1PM/ref=sr_1_2?s=apparel&ie=UTF8&qid=14812454" +
+                        "67&sr=1-2&nodeID=7141123011&keywords=casio+g-shock+women");
+
 
         Gift speakerBass = new Gift ("https://images-na.ssl-images-amazon.com/images/I/31STZw0kV5L.jpg",
                 "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)",
@@ -281,20 +301,56 @@ public class ResultsPage extends Fragment {
         //the first decision is if the person an adult
         if(isAdult) {
             if (burgers) {
-                giftsList.add(moanaSet);
+                giftsList.add(burgerKindCard);
+                giftsList.add(subwayGiftCard);
+                giftsList.add(tacoBellCard);
             }
 
             if (fine) {
-                giftsList.add(moanaBlanket);
+                giftsList.add(pfChangCard);
+                giftsList.add(cheeseCakeCard);
+                giftsList.add(boneFishCard);
             }
 
             if (coffee) {
                 giftsList.add(coffeeSet);
+                giftsList.add(starbucksCard);
             }
 
             if (tea) {
                 giftsList.add(teaSet);
+                giftsList.add(starbucksCard);
             }
+
+            if(collar){
+                if(hasYChromosome){
+                    giftsList.add(watchMen);
+                }
+
+                if(!hasYChromosome){
+                    giftsList.add(womensWatch);
+                }
+
+            }
+
+            if(!collar){
+                if(hasYChromosome){
+                    giftsList.add(casioWatchM);
+                }
+
+                if(!hasYChromosome){
+                    giftsList.add(casioWatchW);
+                }
+            }
+
+            if(outdoors){
+
+            }
+
+            if(!outdoors){
+
+            }
+
             if(hasYChromosome){
                 giftsList.add(outdoorJacket);
 
