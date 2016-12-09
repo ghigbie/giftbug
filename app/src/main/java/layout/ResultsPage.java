@@ -82,6 +82,7 @@ public class ResultsPage extends Fragment {
             isAdult = true;
         }
 
+        //this will come into play as the app gets more developed
         if(age >= 60){
             isSixties = true;
         }
