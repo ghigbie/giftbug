@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.fragment_container, new PersonIntro());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
     }
 
     public void beginAnimation(){
