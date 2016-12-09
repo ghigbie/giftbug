@@ -105,7 +105,8 @@ public class CoffeeTea extends Fragment {
         neitherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isBoth = false;
+                isCoffee = true;
+                isTea = true;
                 loadFragment();
             }
         });
@@ -113,7 +114,8 @@ public class CoffeeTea extends Fragment {
         bothButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isBoth = true;
+                isCoffee = false;
+                isTea = false;
                 loadFragment();
             }
         });
