@@ -16,8 +16,6 @@ import com.geogehigbie.giftbug.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.R.string.no;
-
 
 public class ResultsPage extends Fragment {
 
@@ -188,7 +186,8 @@ public class ResultsPage extends Fragment {
         Gift gamerHeadset = new Gift ("data:image/webp;base64,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" +
                 "5nzqmB2838R+vQEJIcr1WQ+CQ8W2voKru2k+LQWAkLml3PyNQd897smaDYT0lcnnAg9Z1lIVUgAAAA",
                 "HyperX Cloud Stinger Gaming Headset for PC, Xbox One¹, PS4, Wii U (HX-HSCS-BK/NA)",
-                "https://www.amazon.com/gp/product/B01L2ZRYVE/ref=s9_acss_bw_cg_EHD0302B_1c1_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-6&pf_rd_r=7RSR60700EHQ2QXCRE9M&pf_rd_t=101&pf_rd_p=6ffc78a8-1116-4a3d-916d-7a02c929dc3d&pf_rd_i=15469054011")
+                "https://www.amazon.com/gp/product/B01L2ZRYVE/ref=s9_acss_bw_cg_EHD0302B_1c1_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-" +
+                        "6&pf_rd_r=7RSR60700EHQ2QXCRE9M&pf_rd_t=101&pf_rd_p=6ffc78a8-1116-4a3d-916d-7a02c929dc3d&pf_rd_i=15469054011");
 
         Gift moanaSet = new Gift("https://images-na.ssl-images-amazon.com/images/I/91D2iXJCd6L._SL1500_.jpg",
                 "Disney Collection Moana Figurine Playset",
@@ -275,8 +274,8 @@ public class ResultsPage extends Fragment {
                 "https://www.amazon.com/Anne-Klein-AK-2245RTST-Silver-Tone/dp/B0193XJZ1Y/ref=s9_simh_gw_g241_i1_r?_encoding=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf" +
                         "_rd_s=&pf_rd_r=B27X46TZ92T0BVJJ0B1Z&pf_rd_t=36701&pf_rd_p=f58829ef-ff4e-4868-b5c8-fe8c3bd9f769&pf_rd_i=desktop");
 
-        Gift phoneCharger = new Gift ("",
-                "",
+        Gift phoneCharger = new Gift ("https://images-na.ssl-images-amazon.com/images/I/31ILZlloV8L.jpg",
+                "Anker PowerCore+ mini, 3350mAh Lipstick-Sized Portable Charger (3rd Generation, Premium Aluminum Power Bank), One of the Most Compact External Batteries",
                 "https://www.amazon.com/Anker-PowerCore-Lipstick-Sized-Generation-Batteries/dp/B005X1Y7I2/ref=sr_1_3?ie=UTF8&qid=1481246982&sr=" +
                         "8-3&keywords=portable+phone+charger");
 
@@ -467,6 +466,7 @@ public class ResultsPage extends Fragment {
             }
 
             if(!hasYChromosome){
+                giftsList.add(phoneCharger);
 
             }
 
@@ -500,11 +500,12 @@ public class ResultsPage extends Fragment {
 
         if(isChild){
             if(hasYChromosome){
+                giftsList.add(moanaSet);
 
             }
 
             if(!hasYChromosome){
-
+                giftsList.add(moanaBlanket);
             }
 
         }
@@ -513,11 +514,11 @@ public class ResultsPage extends Fragment {
 
         if(isYoungChild){
             if(hasYChromosome){
-
+                giftsList.add(moanaSet);
             }
 
             if(!hasYChromosome){
-
+                giftsList.add(moanaBlanket);
             }
 
         }
@@ -533,7 +534,7 @@ public class ResultsPage extends Fragment {
             }
 
             if(!hasYChromosome){
-
+                giftsList.add(moanaBlanket);
             }
 
 
