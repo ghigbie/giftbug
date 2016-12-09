@@ -67,6 +67,8 @@ public class ResultsPage extends Fragment {
         english = MainActivity.isEnglish();
         view = inflater.inflate(R.layout.fragment_results_page, container, false);
 
+        determineAgeClass();
+
         setTextView();
         // Inflate the layout for this fragment
         return view;
@@ -74,6 +76,10 @@ public class ResultsPage extends Fragment {
 
     public void determineAgeClass(){
         int age = HowOld.getAge();
+
+        if(age <= 200 && age >= 23 ){
+            isAdult = true;
+        }
 
         if(age >= 60){
             isSixties = true;
@@ -94,9 +100,12 @@ public class ResultsPage extends Fragment {
             isCollege = true;
         }
         else if(age <= 17 && age >= 13){
-            isTeenager= true;
+            isTeenager = true;
         }
-        else if(age <= 12 && age >= 8){
+        else if(age <= 12 && age >= 11){
+            isPreTeen = true;
+        }
+        else if(age <= 10 && age >= 8){
             isChild = true;
         }
         else if(age <= 7 && age >= 5){
@@ -266,6 +275,11 @@ public class ResultsPage extends Fragment {
                 "https://www.amazon.com/Anne-Klein-AK-2245RTST-Silver-Tone/dp/B0193XJZ1Y/ref=s9_simh_gw_g241_i1_r?_encoding=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf" +
                         "_rd_s=&pf_rd_r=B27X46TZ92T0BVJJ0B1Z&pf_rd_t=36701&pf_rd_p=f58829ef-ff4e-4868-b5c8-fe8c3bd9f769&pf_rd_i=desktop");
 
+        Gift phoneCharger = new Gift ("",
+                "",
+                "https://www.amazon.com/Anker-PowerCore-Lipstick-Sized-Generation-Batteries/dp/B005X1Y7I2/ref=sr_1_3?ie=UTF8&qid=1481246982&sr=" +
+                        "8-3&keywords=portable+phone+charger");
+
         Gift mixer = new Gift ("https://images-na.ssl-images-amazon.com/images/I/81UknzEqmhL._SL1500_.jpg",
                 "KitchenAid KSM150PSER Artisan Tilt-Head Stand Mixer with Pouring Shield, 5-Quart, Empire Red",
                 "https://www.amazon.com/KitchenAid-KSM150PSER-Artisan-Tilt-Head-Pouring/dp/B00005UP2P/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1481235229&sr=1-1&keywords=mixer");
@@ -299,6 +313,10 @@ public class ResultsPage extends Fragment {
 
 
         //the first decision is if the person an adult
+        //all people will be offere amazon echo dot
+
+
+
         if(isAdult) {
             if (burgers) {
                 giftsList.add(burgerKindCard);
@@ -344,24 +362,41 @@ public class ResultsPage extends Fragment {
             }
 
             if(outdoors){
+                if(hasYChromosome){
+                    giftsList.add(outdoorJacket);
+                    giftsList.add(campingKnife);
+                }
+
+
+                if(!hasYChromosome){
+                    giftsList.add(outdoorJacketW);
+                    giftsList.add(kindleSet);
+                }
 
             }
 
             if(!outdoors){
+                giftsList.add(amazonEchoDot);
+                giftsList.add(blueToothInner);
+                giftsList.add(speakerBass);
+                giftsList.add(paneraCard);
+
 
             }
 
             if(hasYChromosome){
-                giftsList.add(outdoorJacket);
-
-            }else{
-                giftsList.add(outdoorJacketW);
+                giftsList.add(movieTickets);
             }
+
+            if(!hasYChromosome){
+                giftsList.add(mixer);
+            }
+
         }
 
 
 
-
+        //as the app gets more developed, this will be added
         if(isSixties){
             if(hasYChromosome){
 
@@ -374,7 +409,7 @@ public class ResultsPage extends Fragment {
 
         }
 
-
+        //as the app gets more developed, this will be added
         if(isFifties){
             if(hasYChromosome){
 
@@ -386,7 +421,7 @@ public class ResultsPage extends Fragment {
 
         }
 
-
+        //as the app gets more developed, this will be added
         if(isForties){
             if(hasYChromosome){
 
@@ -398,7 +433,7 @@ public class ResultsPage extends Fragment {
 
         }
 
-
+        //as the app gets more developed, this will be added
         if(isThirties){
             if(hasYChromosome){
 
@@ -410,7 +445,7 @@ public class ResultsPage extends Fragment {
 
         }
 
-
+        //as the app gets more developed, this will be added
         if(isTwenties){
             if(hasYChromosome){
 
@@ -424,9 +459,10 @@ public class ResultsPage extends Fragment {
         }
 
 
-
+        //as the app gets more developed, this will be added
         if(isCollege){
             if(hasYChromosome){
+                giftsList.add(gamerHeadset);
 
             }
 
@@ -447,6 +483,17 @@ public class ResultsPage extends Fragment {
 
             }
 
+        }
+
+
+        if(isPreTeen){
+            if(hasYChromosome){
+
+            }
+
+            if(!hasYChromosome){
+
+            }
         }
 
 
