@@ -65,13 +65,21 @@ public class ResultsPage extends Fragment {
         view = inflater.inflate(R.layout.fragment_results_page, container, false);
 
         determineAgeClass();
-
+        defineVariables();
+        createGifts();
         setTextView();
+
+
         // Inflate the layout for this fragment
         return view;
     }
 
     public void defineVariables(){
+        burgers = BurgersOrFine.isPrefersBurgers();
+        collar = CollarNoCollar.isWearsCollar();
+        outdoors = OutdoorsIndoors.isPrefersOutdoors();
+        coffee = CoffeeTea.isCoffee();
+        tea = CoffeeTea.isTea();
 
     }
 
@@ -229,7 +237,6 @@ public class ResultsPage extends Fragment {
                 "https://www.amazon.com/Casio-Womens-BA-111-1ACR-Analog-Digital-Display/dp/B00J6AH1PM/ref=sr_1_2?s=apparel&ie=UTF8&qid=14812454" +
                         "67&sr=1-2&nodeID=7141123011&keywords=casio+g-shock+women");
 
-
         Gift speakerBass = new Gift ("https://images-na.ssl-images-amazon.com/images/I/31STZw0kV5L.jpg",
                 "Sony SRSXB3/BLK Portable Wireless Speaker with Bluetooth (Black)",
                 "https://www.amazon.com/Sony-SRSXB3-BLK-Portable-Bluetooth/dp/B019Q895XE/ref=sr_1_1?ie=UTF8&qid=1481236181&sr=8-1&key" +
@@ -327,7 +334,7 @@ public class ResultsPage extends Fragment {
                 giftsList.add(tacoBellCard);
             }
 
-            if (fine) {
+            if (!burgers) {
                 giftsList.add(pfChangCard);
                 giftsList.add(cheeseCakeCard);
                 giftsList.add(boneFishCard);
@@ -375,8 +382,8 @@ public class ResultsPage extends Fragment {
                     giftsList.add(outdoorJacketW);
                     giftsList.add(kindleSet);
                 }
-
             }
+
 
             if(!outdoors){
                 giftsList.add(amazonEchoDot);
@@ -384,8 +391,8 @@ public class ResultsPage extends Fragment {
                 giftsList.add(speakerBass);
                 giftsList.add(paneraCard);
 
-
             }
+
 
             if(hasYChromosome){
                 giftsList.add(movieTickets);
@@ -408,8 +415,6 @@ public class ResultsPage extends Fragment {
             if(!hasYChromosome){
 
             }
-
-
         }
 
         //as the app gets more developed, this will be added

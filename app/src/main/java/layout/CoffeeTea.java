@@ -54,8 +54,12 @@ public class CoffeeTea extends Fragment {
         return isCoffee;
     }
 
-    public static boolean isNeither() {
+    public static boolean isBoth() {
         return isBoth;
+    }
+
+    public static boolean isTea() {
+        return isTea;
     }
 
     public void setTextView() {
