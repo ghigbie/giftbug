@@ -47,6 +47,7 @@ public class HowOld extends Fragment {
         return view;
     }
 
+    //gets the age of the person entered
     public static int getAge() {
         return age;
     }
